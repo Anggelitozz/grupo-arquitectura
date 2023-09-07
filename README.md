@@ -21,6 +21,14 @@ En el proyecto se podrá encontrar la implementación en Nand2Tetris de las sigu
   <li>Si alguna de las entradas es 0, la salida es 0</li>
 </ul>
 
+<h1>Funcion XOR</h1>
+<img style="height:150px" src="./diagramas/xor.png">
+<p>Esta función presenta dos entradas y una sola salida, también llamado OR exclusivo. La tabla de verdad de una compuerta XOR muestra cómo se comporta en función de las entradas:</p>
+<ul>
+  <li>La salida es 1 cuando un número impar de entradas son 1</li>
+  <li>Si el número de entradas 1 es par, la salida es 0</li>
+</ul>
+
 <h1>Funcion MUX</h1>
 <img style="height:150px" src="./diagramas/MUX.png">
 <p>Esta función multiplexor toma de salida a si el selector es 0 o  toma la entrada b si el selector es 1,
