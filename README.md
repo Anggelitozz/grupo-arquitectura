@@ -18,7 +18,7 @@ En el proyecto se podrá encontrar la implementación en Nand2Tetris de las sigu
   al array de entradas b
 </p>
 <h1>Funcion MUX4WAY16</h1>
-<img style="height:150px" src="./diagramas/MUX4WAY16.png">
+<img style="height:200px" src="./diagramas/MUX4WAY16.png">
 <p>Esta Función toma 4 arrays de 16 entradas cada uno, recibe dos selectores, concantenado la salida de dos compuertas MUX16 unidas al selector 1 a una MUX15 unida al selector 2 de tal manera que:
 </p>
 <ul>
