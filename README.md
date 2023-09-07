@@ -2,6 +2,7 @@
 En el proyecto se podrá encontrar la implementación en Nand2Tetris de las siguientes compuertas lógicas.
 
 <h1>Funcion NOT</h1>
+<img style="height:150px" src="./diagramas/not">
 <p>Su función principal es invertir una señal de entrada binaria, cambia un 1 en un 0 y viceversa.</p>
 
 <h1>Funcion MUX</h1>
