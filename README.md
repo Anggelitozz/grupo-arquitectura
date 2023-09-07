@@ -66,3 +66,27 @@ En el proyecto que presentamos a continuación, se llevará a cabo la implementa
   <li>Si en el primer selector recibe 1, el segundo 1 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de g</li>
   <li>Si en el primer selector recibe 1 , el segundo 1 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de h</li>
 </ul>
+
+<h1>NOT16</h1>
+<img style="height:400px" src="./diagramas/NOT16.png">
+<p>La función de una compuerta Not16 es invertir lógicamente cada uno de los 16 bits de entrada. En otras palabras, toma una entrada de 16 bits y produce una salida de 16 bits donde cada bit de salida es el complemento del bit de entrada correspondiente.
+</p>
+
+  
+<h1>OR16</h1>
+<img style="height:400px" src="./diagramas/OR16.png">
+<p>La función de una compuerta Or16 es realizar una operación lógica OR en paralelo en cada uno de los 16 bits de entrada. En otras palabras, toma dos entradas de 16 bits (a y b) y produce una salida de 16 bits (out), donde cada bit de salida es el resultado de la operación lógica OR aplicada a los bits correspondientes de a y b.
+</p>
+
+
+<h1>OR8WAY</h1>
+<img style="height:400px" src="./diagramas/OR8WAY.png">
+<p>La función de una compuerta Or8Way es realizar una operación lógica OR en ocho bits de entrada de manera que la salida sea 1 si al menos uno de los bits de entrada es 1, y 0 si todos los bits de entrada son 0. En otras palabras, Or8Way toma ocho entradas y produce una sola salida, donde la salida será 1 si al menos una de las entradas es 1, y 0 solo si todas las entradas son 0.
+</p>
+
+  
+<h1>AND16</h1>
+<img style="height:400px" src="./diagramas/AND16.png">
+<p>La función de una compuerta And16 es realizar una operación lógica AND en paralelo en cada uno de los 16 bits de entrada. En otras palabras, toma dos entradas de 16 bits (a y b) y produce una salida de 16 bits (out), donde cada bit de salida es el resultado de la operación lógica AND aplicada a los bits correspondientes de a y b.
+</p>
+
