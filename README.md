@@ -1,5 +1,5 @@
 # PROYECTO-01
-En el proyecto se podrá encontrar la implementación en Nand2Tetris de las siguientes compuertas lógicas.
+En el proyecto que presentamos a continuación, se llevará a cabo la implementación de una serie de compuertas lógicas utilizando la plataforma Nand2Tetris. Estas compuertas lógicas son componentes fundamentales en el mundo de la electrónica digital y la informática, desempeñando un papel crucial en la construcción de circuitos y sistemas digitales. A través de este trabajo, exploraremos la creación y funcionalidad de estas compuertas, demostrando cómo pueden combinarse para realizar operaciones lógicas más complejas.
 
 <h1>Funcion NOT</h1>
 <img style="height:150px" src="./diagramas/not">
