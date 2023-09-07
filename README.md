@@ -67,6 +67,17 @@ En el proyecto que presentamos a continuación, se llevará a cabo la implementa
   <li>Si en el primer selector recibe 1 , el segundo 1 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de h</li>
 </ul>
 
+<h1>Funcion DMUX</h1>
+<img style="height:150px" src="./diagramas/DMUX.png">
+<p>Para la creación del Demultiplexor(DMUX) se emplean 5 NANDs o 2 NANDs y una NOT, tiene 1 entrada y s1 que es una señal de control y dos salidas
+</p>
+<h1>Funcion DMUX4WAY</h1>
+<img style="height:400px" src="./diagramas/DMUX4WAY.png">
+<p>Para el demultiplexor de 4 vías se usan 3 demultiplexores, tiene 1 entrada, dos señales de control y 4 salidas
+</ul>
+<h1>Funcion DMUX8WAY</h1>
+<img style="height:400px" src="./diagramas/DMUX8WAY.png">
+Para el demultiplexor de 4 vías se usan 3 demultiplexores, tiene 1 entrada, 3 señales de control y 8 salidas
 <h1>NOT16</h1>
 <img style="height:400px" src="./diagramas/NOT16.png">
 <p>La función de una compuerta Not16 es invertir lógicamente cada uno de los 16 bits de entrada. En otras palabras, toma una entrada de 16 bits y produce una salida de 16 bits donde cada bit de salida es el complemento del bit de entrada correspondiente.
