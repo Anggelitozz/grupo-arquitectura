@@ -7,10 +7,18 @@ En el proyecto se podrá encontrar la implementación en Nand2Tetris de las sigu
 
 <h1>Funcion OR</h1>
 <img style="height:150px" src="./diagramas/or.png">
-<p>Esta función tiene al menos dos entradas y una sola salida, se puede decir que funciona como una suma. La tabla de verdad de una compuerta OR muestra cómo se comporta en función de las entradas:</p>
+<p>Esta función tiene al menos dos entradas y una sola salida, se conoce como la compuerta suma. La tabla de verdad de una compuerta OR muestra cómo se comporta en función de las entradas:</p>
 <ul>
   <li>Si al menos una de las entradas es 1, la salida es 1</li>
   <li>Solo si todas las entradas son 0, la salida es 0</li>
+</ul>
+
+<h1>Funcion AND</h1>
+<img style="height:150px" src="./diagramas/and.png">
+<p>Esta función presenta dos entradas y una sola salida, su funcionamiento es similar a una multiplicación de entradas. La tabla de verdad de una compuerta AND muestra cómo se comporta en función de las entradas:</p>
+<ul>
+  <li>La salida es 1 solo si todas las entradas son 1</li>
+  <li>Si alguna de las entradas es 0, la salida es 0</li>
 </ul>
 
 <h1>Funcion MUX</h1>
