@@ -10,7 +10,7 @@ En el proyecto se podrá encontrar la implementación en Nand2Tetris de las sigu
 <p>Esta función tiene al menos dos entradas y una sola salida, se puede decir que funciona como una suma. La tabla de verdad de una compuerta OR muestra cómo se comporta en función de las entradas:</p>
 <ul>
   <li>Si al menos una de las entradas es 1, la salida es 1</li>
-  <li>Solo si todas las entradas son 0, la salida es 0.</li>
+  <li>Solo si todas las entradas son 0, la salida es 0</li>
 </ul>
 
 <h1>Funcion MUX</h1>
