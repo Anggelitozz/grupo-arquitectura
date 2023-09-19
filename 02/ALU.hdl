@@ -43,11 +43,18 @@ CHIP ALU {
 
     PARTS:
    // Put you code here:
-   Not16(in=x, out=notx);
-   Mux16(a=x, b=notx, sel=nx, out=notmux1);
-   Not16(in=y, out=noty);
-   Mux16(a=y, b=noty, sel=ny, out=notmux2);
-   Not(in=zx, out=zxout);
+    //Las entradas x son cero si el selector zx es 1
+   Mux16(a=x, b=false, sel=zx, out=xMux);
+    //Las entradas y son cero si el selector zy es 1
+
+   Mux16(a=y, b=false, sel=zx, out=yMux);
+
+   //Se niegan las entradas x cuando el selector nx es 1
+   Not16(in=xMux, out=notx);
+   Mux16(a=xMux, b=notx, sel=nx, out=notmux1);
+   //Se niegan las entradas x cuando el selector nx es 1
+   Not16(in=yMux, out=noty);
+   Mux16(a=yMux, b=noty, sel=ny, out=notmux2);
 
 
 
