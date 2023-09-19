@@ -14,4 +14,6 @@ CHIP Inc16 {
 
     PARTS:
    // Put you code here:
+   //Se hace las suma de la entrada mas un bit que es en la posicion 0 en 1
+   Add16(a=in, b[0]=true, b[1..15]=false out=out);
 }
