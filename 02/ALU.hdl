@@ -44,10 +44,10 @@ CHIP ALU {
     PARTS:
    // Put you code here:
     //Las entradas x son cero si el selector zx es 1
-   Mux16(a=x, b=false, sel=zx, out=xMux);
+   Mux16(a=x, b[0..15]=false, sel=zx, out=xMux);
     //Las entradas y son cero si el selector zy es 1
 
-   Mux16(a=y, b=false, sel=zx, out=yMux);
+   Mux16(a=y, b[0..15]=false, sel=zy, out=yMux);
 
    //Se niegan las entradas x cuando el selector nx es 1
    Not16(in=xMux, out=notx);
@@ -55,10 +55,22 @@ CHIP ALU {
    //Se niegan las entradas x cuando el selector nx es 1
    Not16(in=yMux, out=noty);
    Mux16(a=yMux, b=noty, sel=ny, out=notmux2);
+    //La compuerta x & y de 16 entradas
+   And16(a=notmux1, b=notmux2, out=andOut);
+    //La compuerta x + y de 16 entradas
+   Add16(a=notmux1, b=notmux2, out=addOut);
+   Mux16(a=andOut, b=addOut, sel=f, out=fOut);
 
-
-
-   HalfAdder(a=mux1, b=mux2, sum=hadder, carry=);
+    //Selector del negado de la salida anterior
+    //El ultimo bit indica el signo del numero
+    Not16(in=fOut, out=notfOut);
+    Mux16(a=fOut, b=notfOut, sel=no, out=out, out[15]=ng, out[0..7]=out1, out[8..15]=out2);
+    //El numero es cero si todos sus digitos son cero por tanto concatenamos todos los bits
+    Or8Way(in=out1, out=outor1);
+    Or8Way(in=out2, out=outor2);
+    Or(a=outor1, b=outor2, out=outor);
+    //Si todos son zero la salida zr dara 1
+    Not(in=outor, out=zr);
 
 
 }
