@@ -14,5 +14,11 @@ CHIP Bit {
     OUT out;
 
     PARTS:
+    /*
+    El mux elige dependiendo del selector si escoge la entrada actual para la  siguiente salida
+    o sigue siendo igual que la actual
+    */
+    Mux(a=nextout, b=in, sel=load, out=muxout);
+    DFF(in=muxout, out=out, out=nextout);
     // Put your code here:
 }
