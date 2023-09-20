@@ -21,14 +21,14 @@ CHIP RAM4K {
     */
     DMux8Way(in=load, sel=address[0..2], a=adA, b=adB, c=adC, d=adD, e=adE, f=adF, g=adG, h=adH);
     //**Despues de identificar en las 64 direcciones se graba en su correspondiente espacio en memoria de la RAM de las 512 combinaciones
-    RAM512(in=in, load=adA, address=address[3..15], out=memA);
-    RAM512(in=in, load=adB, address=address[3..15], out=memB);
-    RAM512(in=in, load=adC, address=address[3..15], out=memC);
-    RAM512(in=in, load=adD, address=address[3..15], out=memD);
-    RAM512(in=in, load=adE, address=address[3..15], out=memE);
-    RAM512(in=in, load=adF, address=address[3..15], out=memF);
-    RAM512(in=in, load=adG, address=address[3..15], out=memG);
-    RAM512(in=in, load=adH, address=address[3..15], out=memH);
+    RAM512(in=in, load=adA, address=address[3..11], out=memA);
+    RAM512(in=in, load=adB, address=address[3..11], out=memB);
+    RAM512(in=in, load=adC, address=address[3..11], out=memC);
+    RAM512(in=in, load=adD, address=address[3..11], out=memD);
+    RAM512(in=in, load=adE, address=address[3..11], out=memE);
+    RAM512(in=in, load=adF, address=address[3..11], out=memF);
+    RAM512(in=in, load=adG, address=address[3..11], out=memG);
+    RAM512(in=in, load=adH, address=address[3..11], out=memH);
     //**Se retorna el debido espacio en memoria que exista en ese espacio
     Mux8Way16(a=memA, b=memB, c=memC, d=memD, e=memE, f=memF, g=memG, h=memH, sel=address[0..2], out=out);
 }
