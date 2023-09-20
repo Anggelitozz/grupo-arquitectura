@@ -15,5 +15,17 @@ CHIP RAM16K {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    /*
+    * Primero se seleccion que memoria se quiere guardar a través de  un DMux y se les pasa las primeras 8 combinaciones
+
+    */
+    DMux4Way(in=load, sel=address[0..1], a=adA, b=adB, c=adC, d=adD);
+    //**Despues de identificar en las 16K direcciones se graba en su correspondiente espacio en memoria de la RAM de las 4K combinaciones
+    RAM4K(in=in, load=adA, address=address[2..13], out=memA);
+    RAM4K(in=in, load=adB, address=address[2..13], out=memB);
+    RAM4K(in=in, load=adC, address=address[2..13], out=memC);
+    RAM4K(in=in, load=adD, address=address[2..13], out=memD);
+
+    //**Se retorna el debido espacio en memoria que exista en ese espacio
+    Mux4Way16(a=memA, b=memB, c=memC, d=memD, sel=address[0..1], out=out);
 }

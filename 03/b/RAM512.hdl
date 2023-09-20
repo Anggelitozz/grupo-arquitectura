@@ -20,7 +20,7 @@ CHIP RAM512 {
 
     */
     DMux8Way(in=load, sel=address[0..2], a=adA, b=adB, c=adC, d=adD, e=adE, f=adF, g=adG, h=adH);
-    //**Despues de identificar en las 64 direcciones se graba en su correspondiente espacio en memoria de la RAM de las 64 combinaciones
+    //**Despues de identificar en las 512 direcciones se graba en su correspondiente espacio en memoria de la RAM de las 64 combinaciones
     RAM64(in=in, load=adA, address=address[3..8], out=memA);
     RAM64(in=in, load=adB, address=address[3..8], out=memB);
     RAM64(in=in, load=adC, address=address[3..8], out=memC);

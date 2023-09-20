@@ -20,7 +20,7 @@ CHIP RAM4K {
 
     */
     DMux8Way(in=load, sel=address[0..2], a=adA, b=adB, c=adC, d=adD, e=adE, f=adF, g=adG, h=adH);
-    //**Despues de identificar en las 64 direcciones se graba en su correspondiente espacio en memoria de la RAM de las 512 combinaciones
+    //**Despues de identificar en las 4K direcciones se graba en su correspondiente espacio en memoria de la RAM de las 512 combinaciones
     RAM512(in=in, load=adA, address=address[3..11], out=memA);
     RAM512(in=in, load=adB, address=address[3..11], out=memB);
     RAM512(in=in, load=adC, address=address[3..11], out=memC);
