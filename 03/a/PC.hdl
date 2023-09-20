@@ -18,13 +18,13 @@ CHIP PC {
     PARTS:
     // Put your code here:
     /**
-    *El registrador 
+    *El register registra todos los selectores que se
+    *resetean, cargan o incrementan
     *
     */
     Register(in=resetMux, load=true, out=out, out=nextOut);
-    Inc16(in=incIn, out=incOut);    
-
-    Mux16(a=nextOut, b=incOut, sel=load, out=loadMux);
-    Mux16(a=loadMux, b=in, sel=inc, out=incMux);
-    Mux16(a=incMux, b=false, sel=reset, out=resetMux);
+    Inc16(in=nextOut, out=incOut);    
+    Mux16(a=loadMux, b[0..15]=false, sel=reset, out=resetMux);
+    Mux16(a=incMux, b=in, sel=load, out=loadMux);
+    Mux16(a=nextOut, b=incOut, sel=inc, out=incMux);
 }
