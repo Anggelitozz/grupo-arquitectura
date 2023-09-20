@@ -1,7 +1,12 @@
 # PROYECTO-03: Lógica Secuencial
 
 # PROYECTO-02: Lógica Aritmética
+<h1>ALU</h1>
 <img style="height:400px" src="./02/diagramas/ALU.png">
+ALU funciona de manera condicional sobre ambas entradas X y Y ambas de 16 bits si se niegan o simplemente cero,
+hay un selector que decide sobre la suma o el AND de ambos resultados y finalmente para mirar si el resultado es
+cero se hacen operaciones or anidadas de todas las posiciones del resultado y  se coge el ultimo bit para mirar el
+signo de esta operación.
 
 # PROYECTO-01: Lógica Booleana
 En el proyecto que presentamos a continuación, se llevará a cabo la implementación de una serie de compuertas lógicas utilizando la plataforma Nand2Tetris. Estas compuertas lógicas son componentes fundamentales de la electrónica digital y la informática, desempeñando un papel crucial en la construcción de circuitos y sistemas digitales. A través de este trabajo, exploraremos la creación y funcionalidad de estas compuertas, demostrando cómo pueden combinarse para realizar operaciones lógicas más complejas.
