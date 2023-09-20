@@ -1,3 +1,12 @@
+<h2>¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?</h2>
+<p>En la lógica aritmética se evidencian las funciones básicas del computador al ejecutar operaciones de suma y resta de las entradas 
+desde un punto de vista bit a bit, toda la lógica para realizar operaciones matematicas y lógicas se encuentra en la ALU.
+Mientras que en la lógica secuencial nos muestra como el computador almacena sus valores en memoria, y como es posible cambiar y consultar estos valores.</p>
+<h2>Explique las principales diferencias entre la lógica aritmética y la lógica secuencial</h2>
+<p>La principal diferencia se basa en la realimentación que existe en sus compuertas para guardar valores en memoria para posteriores operaciones,
+mientras que en la lógica aritmética las entrada de una compuerta depende de la salidas de otra.
+</p>
+
 # PROYECTO-03: Lógica Secuencial
 
 # PROYECTO-02: Lógica Aritmética
