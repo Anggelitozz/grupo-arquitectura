@@ -15,5 +15,21 @@ CHIP RAM64 {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    /*
+    
+    * Primero se seleccion que memoria se quiere guardar a través de  un DMux y se les pasa las primeras 8 combinaciones
+
+    */
+    DMux8Way(in=load, sel=address[0..2], a=adA, b=adB, c=adC, d=adD, e=adE, f=adF, g=adG, h=adH);
+    //**Despues de identificar en las 64 direcciones se graba en su correspondiente espacio en memoria de la RAM de las 8 combinaciones
+    RAM8(in=in, load=adA, address=address[3..5], out=memA);
+    RAM8(in=in, load=adB, address=address[3..5], out=memB);
+    RAM8(in=in, load=adC, address=address[3..5], out=memC);
+    RAM8(in=in, load=adD, address=address[3..5], out=memD);
+    RAM8(in=in, load=adE, address=address[3..5], out=memE);
+    RAM8(in=in, load=adF, address=address[3..5], out=memF);
+    RAM8(in=in, load=adG, address=address[3..5], out=memG);
+    RAM8(in=in, load=adH, address=address[3..5], out=memH);
+    //**Se retorna el debido espacio en memoria que exista en ese espacio
+    Mux8Way16(a=memA, b=memB, c=memC, d=memD, e=memE, f=memF, g=memG, h=memH, sel=address[0..2], out=out);
 }
