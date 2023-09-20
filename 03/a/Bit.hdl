@@ -16,7 +16,7 @@ CHIP Bit {
     PARTS:
     /*
     El mux elige dependiendo del selector si escoge la entrada actual para la  siguiente salida
-    o sigue siendo igual que la actual
+    o sigue siendo igual que la actual, el FLIP-FLOP guarda la siguiente salida y la actual
     */
     Mux(a=nextout, b=in, sel=load, out=muxout);
     DFF(in=muxout, out=out, out=nextout);

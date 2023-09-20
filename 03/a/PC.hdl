@@ -17,4 +17,14 @@ CHIP PC {
 
     PARTS:
     // Put your code here:
+    /**
+    *El registrador 
+    *
+    */
+    Register(in=resetMux, load=true, out=out, out=nextOut);
+    Inc16(in=incIn, out=incOut);    
+
+    Mux16(a=nextOut, b=incOut, sel=load, out=loadMux);
+    Mux16(a=loadMux, b=in, sel=inc, out=incMux);
+    Mux16(a=incMux, b=false, sel=reset, out=resetMux);
 }
