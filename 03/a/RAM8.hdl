@@ -15,5 +15,21 @@ CHIP RAM8 {
     OUT out[16];
 
     PARTS:
+    /*
+    *Primero se seleccion que memoria se quiere guardar a través de  un DMux
+    *
+    */
+    DMux8Way(in=load, sel=address, a=adA, b=adB, c=adC, d=adD, e=adE, f=adF, g=adG, h=adH);
+    //**Despues de identificar en las 8 direcciones se graba en su correspondiente espacio en memoria
+    Register(in=in, load=adA, out=memA);
+    Register(in=in, load=adB, out=memB);
+    Register(in=in, load=adC, out=memC);
+    Register(in=in, load=adD, out=memD);
+    Register(in=in, load=adE, out=memE);
+    Register(in=in, load=adF, out=memF);
+    Register(in=in, load=adG, out=memG);
+    Register(in=in, load=adH, out=memH);
+    //**Se retorna el debido espacio en memoria que exista en ese espacio
+    Mux8Way16(a=memA, b=memB, c=memC, d=memD, e=memE, f=memF, g=memG, h=memH, sel=address, out=out);
     // Put your code here:
 }
