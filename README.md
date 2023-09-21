@@ -20,7 +20,8 @@ HalfAdder se utiliza para realizar la suma binaria de dos números binarios de u
 Full Adder se utiliza para sumar tres bits de entrada y producir dos bits de salida. Las dos entradas estándar son A y B, mientras que la tercera entrada es el acarreo de entrada (CARRY_IN). La salida SUM es el resultado de la suma de los tres bits de entrada, mientras que la salida CARRY_OUT indica si hubo un acarreo en la suma. La compuerta se implementó utilizando las compuertas XOR, AND y OR.
 
 ### Add16
-
+<img style="height:200px" src="./02/diagramas/add16.png">
+El Add16 realiza la suma de dos números binarios de 16 bits. Está compuesto por una serie de FullAdders y HalfAdders interconectados, utiliza estos componentes para realizar la suma bit a bit de los números de entrada.
 
 ### ALU
 <img style="height:400px" src="./02/diagramas/ALU.png">
