@@ -66,15 +66,32 @@ mientras que en la lógica aritmética las entrada de una compuerta depende de l
  <li>Control: Los registros de 16 bits pueden estar acompañados de circuitos de control que determinan cuándo se deben leer o escribir datos en el registro y cuándo se deben realizar operaciones específicas.
  </ul>
 
- ### BIT
-<img style="height:150px" src="./03/Diagramas IMG/ram8.jpg">
-<p>es la unidad más pequeña de información en sistemas digitales y computación. Un bit puede tener uno de dos valores posibles: 0 o 1.</p>
-<p>Los bits se utilizan en operaciones lógicas como AND, OR, NOT y XOR. Estas operaciones permiten realizar cálculos y tomar decisiones basadas en condiciones lógicas. Por ejemplo:</p>
+ ### RAM8
+<img style="height:150px" src="./03/Diagramas IMG/ram8.png">
+<p>es un tipo de memoria volátil utilizada en sistemas digitales para almacenar datos temporalmente. En este caso, la RAM tiene 8 registros de almacenamiento, y cada registro tiene una capacidad de 16 bits, lo que significa que cada uno puede almacenar una palabra de 16 bits de información.</p>
+
+<p>Funcionamiento:</p>
 <ul>
   
-  <li>La operación AND entre dos bits solo es igual a 1 si ambos bits son 1; de lo contrario, el resultado es 0.
+ <li>Estructura: Esta RAM tiene 8 registros de almacenamiento, numerados típicamente del 0 al 7, que se utilizan para almacenar datos de 16 bits cada uno. Cada registro se puede ver como una caja en la que se almacena 
+ una palabra binaria de 16 bits.
 
-  <li>La operación OR entre dos bits es igual a 1 si al menos uno de los bits es 1; si ambos son 0, el resultado es 0.
+ <li>Acceso Aleatorio: La característica clave de la memoria RAM es que permite el acceso aleatorio a cualquier registro. Esto significa que se puede leer o escribir en cualquiera de los 8 registros sin importar su 
+ orden.Cada registro se identifica mediante una dirección única.
+
+ <li>Lectura y Escritura: Puedes leer el valor almacenado en un registro específico al proporcionar su dirección y obtener los 16 bits de datos almacenados en ese registro. También puedes escribir nuevos datos en un 
+ registro especificado de la misma manera.
+
+ <li>Velocidad: La memoria RAM es conocida por su alta velocidad de acceso, lo que la hace adecuada para almacenar datos temporales utilizados por la CPU mientras se ejecutan programas. La velocidad de acceso de la RAM 
+ permite que la CPU acceda rápidamente a los datos necesarios para realizar cálculos y ejecutar programas de manera eficiente.
+
+ <li>Uso Común: Este tipo de RAM se utiliza en una variedad de aplicaciones, desde computadoras personales hasta sistemas embebidos, donde se necesita un almacenamiento temporal de datos para el procesamiento de 
+ información.
+
+ <li>Conexión a la CPU: La RAM se conecta a la unidad central de procesamiento (CPU) y actúa como un área de almacenamiento de trabajo donde la CPU puede leer y escribir datos rápidamente.
+
+ <li>Capacidad Limitada: Aunque es rápida, la RAM generalmente tiene una capacidad limitada en comparación con otros tipos de almacenamiento, como los discos duros. Esto significa que solo puede almacenar datos mientras 
+  la alimentación esté encendida y se borra cuando se apaga o reinicia el sistema.
 </ul>
 
 ## PROYECTO-02: Lógica Aritmética
