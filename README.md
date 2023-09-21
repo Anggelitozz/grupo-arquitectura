@@ -12,7 +12,7 @@ mientras que en la lógica aritmética las entrada de una compuerta depende de l
 
 ## PROYECTO-02: Lógica Aritmética
 ### HalfAdder
-<img style="height:200px" src="./02/diagramas/HalfAdder.png">
+<img style="height:100px" src="./02/diagramas/HalfAdder.png">
 HalfAdder se utiliza para realizar la suma binaria de dos números binarios de un solo bit. Tiene dos entradas, A y B, y dos salidas, SUM y CARRY. La salida SUM es el bit menos significativo (LSB) del resultado, mientras que la salida CARRY es el bit más significativo (MSB) del resultado, indicando si hubo un acarreo en la suma de las dos entradas. La compuerta se implementó utilizando las compuertas XOR y AND.
 ### ALU
 <img style="height:400px" src="./02/diagramas/ALU.png">
