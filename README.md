@@ -94,6 +94,92 @@ mientras que en la lógica aritmética las entrada de una compuerta depende de l
   la alimentación esté encendida y se borra cuando se apaga o reinicia el sistema.
 </ul>
 
+### RAM64
+<p>es un tipo de memoria volátil utilizada para almacenar datos temporalmente. En este caso, la RAM tiene 64 registros de almacenamiento, y cada registro tiene una capacidad de 16 bits (se crea con 8 RAM8).</p>
+
+<p>Funcionamiento:</p>
+<ul>
+  
+ <li>Estructura: Esta RAM tiene 64 registros de almacenamiento, numerados típicamente del 0 al 63, que se utilizan para almacenar datos de 16 bits cada uno. Cada registro se puede ver como una caja en la que se almacena una palabra binaria de 16 bits.
+
+ <li>Acceso Aleatorio: La característica clave de la memoria RAM es que permite el acceso aleatorio a cualquier registro. Esto significa que se puede leer o escribir en cualquiera de los 64 registros sin importar su orden. Cada registro se identifica mediante una dirección única.
+
+ <li>Lectura y Escritura: Puedes leer el valor almacenado en un registro específico al proporcionar su dirección y obtener los 16 bits de datos almacenados en ese registro. También puedes escribir nuevos datos en un registro especificado de la misma manera.
+
+ <li>Velocidad: La memoria RAM es conocida por su alta velocidad de acceso, lo que la hace adecuada para almacenar datos temporales utilizados por la CPU mientras se ejecutan programas. La velocidad de acceso de la RAM permite que la CPU acceda rápidamente a los datos necesarios para realizar cálculos y ejecutar programas de manera eficiente.
+
+ <li>Uso Común: Este tipo de RAM se utiliza en una variedad de aplicaciones, desde computadoras personales hasta sistemas embebidos, donde se necesita un almacenamiento temporal de datos para el procesamiento de información.
+
+ <li>Conexión a la CPU: La RAM se conecta a la unidad central de procesamiento (CPU) y actúa como un área de almacenamiento de trabajo donde la CPU puede leer y escribir datos rápidamente.
+
+ <li>Capacidad Limitada: Aunque es rápida, la RAM generalmente tiene una capacidad limitada en comparación con otros tipos de almacenamiento, como los discos duros. Esto significa que solo puede almacenar datos mientras la alimentación esté encendida y se borra cuando se apaga o reinicia el sistema.
+</ul>
+
+### RAM512
+<p>es un tipo de memoria volátil utilizada para almacenar datos temporalmente. En este caso, la RAM tiene 512 registros de almacenamiento, y cada registro tiene una capacidad de 16 bits (se crea con 8 ram64).</p>
+
+<p>Funcionamiento:</p>
+<ul>
+  
+ <li>Estructura: Esta RAM tiene 64 registros de almacenamiento, numerados típicamente del 0 al 511, que se utilizan para almacenar datos de 16 bits cada uno. Cada registro se puede ver como una caja en la que se almacena una palabra binaria de 16 bits.
+
+ <li>Acceso Aleatorio: La característica clave de la memoria RAM es que permite el acceso aleatorio a cualquier registro. Esto significa que se puede leer o escribir en cualquiera de los 512 registros sin importar su orden. Cada registro se identifica mediante una dirección única.
+
+ <li>Lectura y Escritura: Puedes leer el valor almacenado en un registro específico al proporcionar su dirección y obtener los 16 bits de datos almacenados en ese registro. También puedes escribir nuevos datos en un registro especificado de la misma manera.
+
+ <li>Velocidad: La memoria RAM es conocida por su alta velocidad de acceso, lo que la hace adecuada para almacenar datos temporales utilizados por la CPU mientras se ejecutan programas. La velocidad de acceso de la RAM permite que la CPU acceda rápidamente a los datos necesarios para realizar cálculos y ejecutar programas de manera eficiente.
+
+ <li>Uso Común: Este tipo de RAM se utiliza en una variedad de aplicaciones, desde computadoras personales hasta sistemas embebidos, donde se necesita un almacenamiento temporal de datos para el procesamiento de información.
+
+ <li>Conexión a la CPU: La RAM se conecta a la unidad central de procesamiento (CPU) y actúa como un área de almacenamiento de trabajo donde la CPU puede leer y escribir datos rápidamente.
+
+ <li>Capacidad Limitada: Aunque es rápida, la RAM generalmente tiene una capacidad limitada en comparación con otros tipos de almacenamiento, como los discos duros. Esto significa que solo puede almacenar datos mientras la alimentación esté encendida y se borra cuando se apaga o reinicia el sistema.
+</ul>
+### RAM4k
+<p>es un tipo de memoria volátil utilizada para almacenar datos temporalmente. En este caso, la RAM tiene 4096 registros de almacenamiento, y cada registro tiene una capacidad de 16 bits (se crea con 8 ram512).</p>
+
+<p>Funcionamiento:</p>
+<ul>
+  
+ <li>Estructura: Esta RAM tiene 64 registros de almacenamiento, numerados típicamente del 0 al 4095, que se utilizan para almacenar datos de 16 bits cada uno. Cada registro se puede ver como una caja en la que se almacena una palabra binaria de 16 bits.
+
+ <li>Acceso Aleatorio: La característica clave de la memoria RAM es que permite el acceso aleatorio a cualquier registro. Esto significa que se puede leer o escribir en cualquiera de los 4096 registros sin importar su orden. Cada registro se identifica mediante una dirección única.
+
+ <li>Lectura y Escritura: Puedes leer el valor almacenado en un registro específico al proporcionar su dirección y obtener los 16 bits de datos almacenados en ese registro. También puedes escribir nuevos datos en un registro especificado de la misma manera.
+
+ <li>Velocidad: La memoria RAM es conocida por su alta velocidad de acceso, lo que la hace adecuada para almacenar datos temporales utilizados por la CPU mientras se ejecutan programas. La velocidad de acceso de la RAM permite que la CPU acceda rápidamente a los datos necesarios para realizar cálculos y ejecutar programas de manera eficiente.
+
+ <li>Uso Común: Este tipo de RAM se utiliza en una variedad de aplicaciones, desde computadoras personales hasta sistemas embebidos, donde se necesita un almacenamiento temporal de datos para el procesamiento de información.
+
+ <li>Conexión a la CPU: La RAM se conecta a la unidad central de procesamiento (CPU) y actúa como un área de almacenamiento de trabajo donde la CPU puede leer y escribir datos rápidamente.
+
+ <li>Capacidad Limitada: Aunque es rápida, la RAM generalmente tiene una capacidad limitada en comparación con otros tipos de almacenamiento, como los discos duros. Esto significa que solo puede almacenar datos mientras la alimentación esté encendida y se borra cuando se apaga o reinicia el sistema.
+</ul>
+
+### RAM16k
+<p>es un tipo de memoria volátil utilizada para almacenar datos temporalmente. En este caso, la RAM tiene 16384 registros de almacenamiento, y cada registro tiene una capacidad de 16 bits (se crea con 4 RAM4K).</p>
+
+<p>Funcionamiento:</p>
+<ul>
+  
+ <li>Estructura: Esta RAM tiene 64 registros de almacenamiento, numerados típicamente del 0 al 16384, que se utilizan para almacenar datos de 16 bits cada uno. Cada registro se puede ver como una caja en la que se almacena una palabra binaria de 16 bits.
+
+ <li>Acceso Aleatorio: La característica clave de la memoria RAM es que permite el acceso aleatorio a cualquier registro. Esto significa que se puede leer o escribir en cualquiera de los 16384 registros sin importar su orden. Cada registro se identifica mediante una dirección única.
+
+ <li>Lectura y Escritura: Puedes leer el valor almacenado en un registro específico al proporcionar su dirección y obtener los 16 bits de datos almacenados en ese registro. También puedes escribir nuevos datos en un registro especificado de la misma manera.
+
+ <li>Velocidad: La memoria RAM es conocida por su alta velocidad de acceso, lo que la hace adecuada para almacenar datos temporales utilizados por la CPU mientras se ejecutan programas. La velocidad de acceso de la RAM permite que la CPU acceda rápidamente a los datos necesarios para realizar cálculos y ejecutar programas de manera eficiente.
+
+ <li>Uso Común: Este tipo de RAM se utiliza en una variedad de aplicaciones, desde computadoras personales hasta sistemas embebidos, donde se necesita un almacenamiento temporal de datos para el procesamiento de información.
+
+ <li>Conexión a la CPU: La RAM se conecta a la unidad central de procesamiento (CPU) y actúa como un área de almacenamiento de trabajo donde la CPU puede leer y escribir datos rápidamente.
+
+ <li>Capacidad Limitada: Aunque es rápida, la RAM generalmente tiene una capacidad limitada en comparación con otros tipos de almacenamiento, como los discos duros. Esto significa que solo puede almacenar datos mientras la alimentación esté encendida y se borra cuando se apaga o reinicia el sistema.
+</ul>
+
+<img style="height:100px" src=".03/Diagramas IMG/RAM.png">
+Cada RAM es una construcción de una cantidad específica de RAMs anterior
+
 ## PROYECTO-02: Lógica Aritmética
 ### HalfAdder
 <img style="height:100px" src="./02/diagramas/HalfAdder.png">
