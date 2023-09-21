@@ -25,6 +25,7 @@ El Add16 realiza la suma de dos números binarios de 16 bits. Está compuesto po
 
 ### Inc16
 <img style="height:200px" src="./02/diagramas/Inc16.jpeg">
+El Inc16 incrementa en uno un número binario de 16 bits. Esencialmente, el Inc16 es una versión modificada del Add16, se utiliza este para realizar la suma de entrada y luego agrega un bit adicional para manejar el acarreo.
 
 ### ALU
 <img style="height:400px" src="./02/diagramas/ALU.png">
