@@ -9,6 +9,73 @@ mientras que en la lógica aritmética las entrada de una compuerta depende de l
 </p>
 
 ## PROYECTO-03: Lógica Secuencial
+### DFF
+<img style="height:150px" src="./03/Diagramas IMG/FlipFlop.jpeg">
+<p>Esta función almacena y controlar el flujo de datos binarios. Es un elemento fundamental en la construcción de registros, contadores y otros componentes de circuitos secuenciales.</p>
+<p>Funcionamiento:</p>
+<ul>
+  <li>Entrada de Datos (D): El D Flip-Flop tiene una entrada llamada "D" (Data) que se utiliza para ingresar el dato que se desea almacenar. Esta entrada puede ser 0 o 1, representando los valores lógicos binarios.
+
+  <li>Reloj (Clock): También tiene una entrada llamada "Clock" que controla cuándo se debe leer el valor presente en la entrada D y cargarlo en el Flip-Flop. El Flip-Flop almacena el valor de D solo en los flancos del 
+   reloj (flanco ascendente o descendente, dependiendo del tipo de DFF).
+
+  <li>Salida (Q): El D Flip-Flop tiene una salida llamada "Q" que representa el valor almacenado en ese momento. La salida Q refleja el valor de la entrada D solo cuando ocurre un flanco de reloj.
+
+  <li>Salida Inversa (Q'): Algunos D Flip-Flops también tienen una salida inversa, denotada como "Q'", que es la negación de la salida Q. Esto significa que Q' siempre es el complemento lógico de Q.
+
+  <li>Set y Reset (S y R): Algunos D Flip-Flops también incluyen entradas de "Set" y "Reset" para permitir el borrado o establecimiento del valor almacenado. Cuando la entrada Set (S) se activa, la salida Q se establece 
+  en 1. Cuando la entrada Reset (R) se activa, la salida Q se borra a 0.
+</ul>
+
+### BIT
+<img style="height:150px" src="./03/Diagramas IMG/bit.jpg">
+<p>es la unidad más pequeña de información en sistemas digitales y computación. Un bit puede tener uno de dos valores posibles: 0 o 1.</p>
+<p>Los bits se utilizan en operaciones lógicas como AND, OR, NOT y XOR. Estas operaciones permiten realizar cálculos y tomar decisiones basadas en condiciones lógicas. Por ejemplo:</p>
+<ul>
+  
+  <li>La operación AND entre dos bits solo es igual a 1 si ambos bits son 1; de lo contrario, el resultado es 0.
+
+  <li>La operación OR entre dos bits es igual a 1 si al menos uno de los bits es 1; si ambos son 0, el resultado es 0.
+</ul>
+
+### Register
+<img style="height:150px" src="./03/Diagramas IMG/register.png">
+<p>se utiliza para almacenar y manipular datos de 16 bits. Un registro es un conjunto de elementos de almacenamiento de datos que pueden almacenar información temporalmente y permitir su procesamiento. En el caso de un registro de 16 bits, puede almacenar valores binarios de 16 dígitos (0s y 1s). </p>
+
+<p>Funcionamiento:</p>
+
+<ul>
+  
+ <li>Estructura: Un registro de 16 bits está compuesto por 16 elementos de almacenamiento, conocidos como flip-flops o biestables, que pueden almacenar un valor binario (0 o 1) cada uno. Cada flip-flop representa un bit 
+     individual en el registro.
+
+ <li>Entrada de Datos: Los registros de 16 bits pueden tener una entrada de datos (o múltiples entradas) que permite cargar un valor de 16 bits en el registro. Los datos se ingresan en formato binario.
+
+ <li>Lectura y Escritura: Puedes leer el valor almacenado en el registro de 16 bits desde su salida. También es posible escribir nuevos valores en el registro al proporcionar datos en las entradas correspondientes.
+
+ <li>Operaciones Aritméticas y Lógicas: Los registros de 16 bits son componentes comunes en la aritmética digital y las operaciones lógicas. Se utilizan para realizar sumas, restas, multiplicaciones, divisiones y otras 
+ operaciones matemáticas en números de 16 bits. También se pueden utilizar para operaciones lógicas como AND, OR, NOT, XOR, etc.
+
+ <li>Desplazamiento de Bits: Los registros de 16 bits se pueden utilizar para realizar operaciones de desplazamiento de bits, que son útiles en aplicaciones como la manipulación de datos y la criptografía.
+
+ <li>Almacenamiento Temporal: Estos registros son utilizados en aplicaciones donde se necesita almacenar datos temporalmente antes de su procesamiento o transferencia a otros componentes del sistema.
+
+ <li>Conexión en Serie: A menudo, varios registros de 16 bits se pueden conectar en serie para formar registros más anchos, como registros de 32 bits o 64 bits. Esto se utiliza para manejar números más grandes y 
+ realizar cálculos más complejos.
+
+ <li>Control: Los registros de 16 bits pueden estar acompañados de circuitos de control que determinan cuándo se deben leer o escribir datos en el registro y cuándo se deben realizar operaciones específicas.
+ </ul>
+
+ ### BIT
+<img style="height:150px" src="./03/Diagramas IMG/ram8.jpg">
+<p>es la unidad más pequeña de información en sistemas digitales y computación. Un bit puede tener uno de dos valores posibles: 0 o 1.</p>
+<p>Los bits se utilizan en operaciones lógicas como AND, OR, NOT y XOR. Estas operaciones permiten realizar cálculos y tomar decisiones basadas en condiciones lógicas. Por ejemplo:</p>
+<ul>
+  
+  <li>La operación AND entre dos bits solo es igual a 1 si ambos bits son 1; de lo contrario, el resultado es 0.
+
+  <li>La operación OR entre dos bits es igual a 1 si al menos uno de los bits es 1; si ambos son 0, el resultado es 0.
+</ul>
 
 ## PROYECTO-02: Lógica Aritmética
 ### HalfAdder
