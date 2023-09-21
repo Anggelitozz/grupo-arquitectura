@@ -178,7 +178,7 @@ mientras que en la lógica aritmética las entrada de una compuerta depende de l
  <li>Capacidad Limitada: Aunque es rápida, la RAM generalmente tiene una capacidad limitada en comparación con otros tipos de almacenamiento, como los discos duros. Esto significa que solo puede almacenar datos mientras la alimentación esté encendida y se borra cuando se apaga o reinicia el sistema.
 </ul>
 
-<img style="height:100px" src=".03/Diagramas IMG/RAM.PNG">
+<img style="height:100px" src="./03/Diagramas IMG/RAM.png">
 Cada RAM es una construcción de una cantidad específica de RAMs anterior
 
 ## PROYECTO-02: Lógica Aritmética
