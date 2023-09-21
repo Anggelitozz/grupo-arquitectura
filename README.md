@@ -134,7 +134,8 @@ mientras que en la lógica aritmética las entrada de una compuerta depende de l
  <li>Conexión a la CPU: La RAM se conecta a la unidad central de procesamiento (CPU) y actúa como un área de almacenamiento de trabajo donde la CPU puede leer y escribir datos rápidamente.
 
  <li>Capacidad Limitada: Aunque es rápida, la RAM generalmente tiene una capacidad limitada en comparación con otros tipos de almacenamiento, como los discos duros. Esto significa que solo puede almacenar datos mientras la alimentación esté encendida y se borra cuando se apaga o reinicia el sistema.
-</ul>
+</ul> 
+
 ### RAM4k
 <p>es un tipo de memoria volátil utilizada para almacenar datos temporalmente. En este caso, la RAM tiene 4096 registros de almacenamiento, y cada registro tiene una capacidad de 16 bits (se crea con 8 ram512).</p>
 
