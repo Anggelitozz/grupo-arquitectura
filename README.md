@@ -1,3 +1,6 @@
+#PRACTICA 03
+
+
 # PRACTICA 02
 <h2>¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?</h2>
 <p>En la lógica aritmética se evidencian las funciones básicas del computador al ejecutar operaciones de suma y resta de las entradas 
