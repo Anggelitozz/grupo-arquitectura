@@ -32,11 +32,11 @@ M=D
 (LOOP)
 @R1
 D=M
-
+//Se suman todas las multiplicaciones
 @R2
 M=D+M
 
-
+//Se restan las iteraciones que se multiplican
 @R3
 M=M-1
 
