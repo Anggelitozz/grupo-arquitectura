@@ -20,4 +20,19 @@ CHIP Computer {
 
     PARTS:
     // Put your code here:
+    //Se carga en memoria y las intrucciones
+    CPU(inM=loadFromMem,
+        instruction=romOut,
+        reset=reset,
+        outM=storeM, 
+        writeM=writeMem, 
+        addressM=addressMem, 
+        pc=pcOut);
+    //Posteriormente se guardar en memoria
+    Memory(in=storeM,
+           load=writeMem, 
+           address=addressMem, 
+           out=loadFromMem);
+    //Se carga la ROM del hack para cargarla como instrucciones en la CPU
+    ROM32K(address=pcOut, out=romOut);
 }
