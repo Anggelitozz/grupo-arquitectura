@@ -39,7 +39,12 @@ código usando un ensamblador y ejecutarlos usando un emulador de CPU.
 ## PROYECTO-05: Arquitectura de Computadores
 ### Memory
 <p>Es un componente de hardware que se utiliza para almacenar datos y programas en una computadora. El chip consta de tres partes principales: RAM16K, Screen y Keyboard, La pantalla y el teclado están disponibles como chips integrados, por lo tanto, no es necesario implementarla. Para la elaboración de este chip es importante la utilización de el chip RAM16K eleborado en la práctica anterior, esto facilita la construcción de la función.
-La RAM16K es un chip que se utiliza para almacenar datos en la memoria de acceso aleatorio (RAM) de la computadora, tiene una capacidad de 16384 palabras de 16 bits cada una, lo que equivale a 16 kilobytes de memoria. La pantalla es un dispositivo de salida que muestra información visual al usuario, mientras que el teclado es un dispositivo de entrada que permite al usuario ingresar datos en la computadora.</p>
+La RAM16K es un chip que se utiliza para almacenar datos en la memoria de acceso aleatorio (RAM) de la computadora, tiene una capacidad de 16384 palabras de 16 bits cada una, lo que equivale a 16 kilobytes de 
+memoria. La pantalla es un dispositivo de salida que muestra información visual al usuario, mientras que el teclado es un dispositivo de entrada que permite al usuario ingresar datos en la computadora.</p>
+
+### CPU
+<p> Finalmente la CPU es la que recoje las intrucciones en Lenguaje máquina para poder hacer operaciones, por eso es que cada bit de la instrucción es un operador que la CPU interpreta bien sean
+operaciones de la ALU, los operadores del Lenguaje de Ensamble como JEQ, JLE, JGT, JLT y como los registros A,D y M que son operandos dentro de la Ejecución de la CPU , guardando la respuesta en una dirección en Memoria del registro</p>
 
 # PRACTICA 02
 <h2>¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?</h2>
