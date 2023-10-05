@@ -7,7 +7,32 @@ Para comprender este lenguaje de bajo nivel es necesario comprender a grandes ra
 con esto se es posible desarrollar sistemas operativos y compiladores que permitan interpretar al lenguaje máquina los lenguajes de alto nivel.
 </p>
 
+### Mult.asm
+<p>se refiere a un archivo que contiene código fuente escrito en lenguaje ensamblador para implementar una operación de multiplicación en una arquitectura de computadora específica. Este archivo suele ser parte de un proyecto o programa más grande que requiere realizar multiplicaciones.El contenido exacto de un archivo "mult.asm" variará según la arquitectura de la computadora para la que se esté escribiendo y los detalles de implementación específicos. El código ensamblador se utiliza para programar a nivel de bajo nivel y se traduce directamente en instrucciones de máquina que la CPU puede ejecutar. La implementación de la multiplicación en lenguaje ensamblador puede variar significativamente según la arquitectura del procesador y las convenciones de programación utilizadas.</p>
 
+<p>Las entradas de este programa son los valores almacenados en R0
+y R1 (RAM[0] y RAM[1]). El programa calcula el producto R0 * R1 y almacena el resultado en
+R2 (RAM[2]). Suponga que R0 ≥ 0, R1 ≥ 0 y R0 * R1 < 32768 (su programa no necesita probar estos
+condiciones). El script Multi.test y el archivo de comparación Mult.cmp suministrados están diseñados para probar su
+programa sobre algunos valores representativos.</p>
+
+### Fill.asm
+
+<p>El archivo "fill.asm" generalmente se utiliza para llenar una región de memoria con un valor específico. Su propósito principal es inicializar o configurar una parte de la memoria con datos predeterminados antes de que un programa o sistema operativo comience a utilizarla.
+
+En un programa en lenguaje ensamblador como el que proporcioné anteriormente, el archivo "fill.asm" contiene el código necesario para realizar esta tarea.</p>
+
+<p>
+  Este programa ejecuta un bucle infinito que escucha la
+teclado. Cuando se presiona una tecla (cualquier tecla), el programa oscurece toda la pantalla escribiendo
+"negro" en cada píxel. Cuando no se presiona ninguna tecla, el programa borra la pantalla escribiendo "blanco" en
+cada píxel. Puede optar por oscurecer y borrar la pantalla en cualquier patrón espacial, siempre que
+presionar una tecla continuamente durante el tiempo suficiente resultará en una pantalla completamente negra, y no presionar
+cualquier tecla durante el tiempo suficiente dará como resultado una pantalla limpia. Este programa tiene un script de prueba (Fill.tst) pero no
+comparar archivo: debe verificarse inspeccionando visiblemente la pantalla simulada en el emulador de CPU.
+Escribirás estos programas ensambladores usando un editor de texto plano, los traducirás a Hack binario
+código usando un ensamblador y ejecutarlos usando un emulador de CPU.
+</p>
 
 
 ## PROYECTO-05: Arquitectura de Computadores
