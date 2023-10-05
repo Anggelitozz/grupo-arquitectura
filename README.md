@@ -17,6 +17,7 @@ R2 (RAM[2]). Suponga que R0 ≥ 0, R1 ≥ 0 y R0 * R1 < 32768 (su programa no ne
 condiciones). El script Multi.test y el archivo de comparación Mult.cmp suministrados están diseñados para probar su
 programa sobre algunos valores representativos.</p>
 
+
 ### Fill.asm
 
 <p>El archivo "fill.asm" generalmente se utiliza para llenar una región de memoria con un valor específico. Su propósito principal es inicializar o configurar una parte de la memoria con datos predeterminados antes de que un programa o sistema operativo comience a utilizarla.
@@ -45,6 +46,12 @@ memoria. La pantalla es un dispositivo de salida que muestra información visual
 ### CPU
 <p> Finalmente la CPU es la que recoje las intrucciones en Lenguaje máquina para poder hacer operaciones, por eso es que cada bit de la instrucción es un operador que la CPU interpreta bien sean
 operaciones de la ALU, los operadores del Lenguaje de Ensamble como JEQ, JLE, JGT, JLT y como los registros A,D y M que son operandos dentro de la Ejecución de la CPU , guardando la respuesta en una dirección en Memoria del registro</p>
+
+### Computer
+
+<p> Tenemos los componentes básico para conformar una computadora que es una Memoria y una CPU, La memoria almacena en todas sus direcciones en memoria los registros de Lenguaje de Ensamble,
+y carga los registros anteriores a la CPU que procesa las instrucciones despues que el ROM reciba las instrucciones en Lenguaje de Ensable para compilarlo en Instrucciones de Lenguaje de Máquina posteriormente
+guarda el resultado en los registro de la Memoria para seguir procesando las intrucciones siguiente en Lenguaje de máquina</p>
 
 # PRACTICA 02
 <h2>¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?</h2>
