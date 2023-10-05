@@ -1,7 +1,11 @@
 # PRACTICA 03
 <h2>¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?</h2>
 <p>El lenguaje de máquina es relevante porque brinda un canal de comunicación directo, permitiendo la interacción entre el programador y la capa física, es decir el hardware subyacente. 
-Es un pilar importante para la arquitectura computacional al ser un sistema de códigos que pueden ser interpretados por circuitos micro programables que se encargan de determinar cuáles son las acciones que deben de ser realizadas por una máquina. Para comprender este lenguaje de bajo nivel es necesario comprender a grandes rasgos el funcionamiento del hardware, con esto se es posible desarrollar sistemas operativos y compiladores que permitan interpretar al lenguaje máquina los lenguajes de alto nivel.</p>
+Es un pilar importante para la arquitectura computacional al ser un sistema de códigos que pueden ser interpretados por 
+circuitos micro programables que se encargan de determinar cuáles son las acciones que deben de ser realizadas por una máquina. 
+Para comprender este lenguaje de bajo nivel es necesario comprender a grandes rasgos el funcionamiento del hardware, 
+con esto se es posible desarrollar sistemas operativos y compiladores que permitan interpretar al lenguaje máquina los lenguajes de alto nivel.
+</p>
 
 # PRACTICA 02
 <h2>¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?</h2>
