@@ -7,6 +7,14 @@ Para comprender este lenguaje de bajo nivel es necesario comprender a grandes ra
 con esto se es posible desarrollar sistemas operativos y compiladores que permitan interpretar al lenguaje máquina los lenguajes de alto nivel.
 </p>
 
+
+
+
+## PROYECTO-05: Arquitectura de Computadores
+### Memory
+<p>Es un componente de hardware que se utiliza para almacenar datos y programas en una computadora. El chip consta de tres partes principales: RAM16K, Screen y Keyboard, La pantalla y el teclado están disponibles como chips integrados, por lo tanto, no es necesario implementarla. Para la elaboración de este chip es importante la utilización de el chip RAM16K eleborado en la práctica anterior, esto facilita la construcción de la función.
+La RAM16K es un chip que se utiliza para almacenar datos en la memoria de acceso aleatorio (RAM) de la computadora, tiene una capacidad de 16384 palabras de 16 bits cada una, lo que equivale a 16 kilobytes de memoria. La pantalla es un dispositivo de salida que muestra información visual al usuario, mientras que el teclado es un dispositivo de entrada que permite al usuario ingresar datos en la computadora.</p>
+
 # PRACTICA 02
 <h2>¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?</h2>
 <p>En la lógica aritmética se evidencian las funciones básicas del computador al ejecutar operaciones de suma y resta de las entradas 
