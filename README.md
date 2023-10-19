@@ -1,6 +1,6 @@
 # PRACTICA 04
 <h2>Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan?</h2>
-<p></p>
+<p>Una limitante que observamos es que el ensamblador de Hack solo puede traducir programas escritos en el lenguaje ensamblador simbólico Hack, que es un lenguaje específico para la máquina Hack. Esto significa que no podemos usar el ensamblador para traducir programas escritos en otros lenguajes ensambladores más complejos, como el lenguaje ensamblador x86 o el lenguaje ensamblador ARM. Además, el ensamblador de Hack no tiene ninguna funcionalidad avanzada, como optimización de código, manejo de errores o generación de reportes. Estas limitaciones pueden dificultar el desarrollo y la depuración de programas más sofisticados o portables. </p>
 
 ## Proyecto-06: El ensamblador
 <p></p>
