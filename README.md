@@ -1,3 +1,10 @@
+# PRACTICA 04
+<h2>Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan?</h2>
+<p></p>
+
+## Proyecto-06: El ensamblador
+<p></p>
+
 # PRACTICA 03
 <h2>¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?</h2>
 <p>El lenguaje de máquina es relevante porque brinda un canal de comunicación directo, permitiendo la interacción entre el programador y la capa física, es decir el hardware subyacente. 
