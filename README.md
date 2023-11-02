@@ -392,7 +392,8 @@ explica la función "comp_entry," que convierte instrucciones legibles por human
 # PRACTICA 05
 <p>Esta práctica presenta el desarrollo de dos proyectos del curso Nand to Tetris. El proyecto 7 se enfoca en la implementación de una máquina virtual que permite ejecutar programas escritos en un lenguaje de alto nivel llamado Jack. En cuanto al proyecto 8, este se ocupa del control computacional, es decir, de las estructuras de programación que permiten realizar saltos condicionales y bucles. En ambos proyectos se utiliza el stack aritmético, una estructura de datos que facilita la manipulación de valores numéricos y lógicos. El objetivo de estos proyectos es comprender los principios y mecanismos que subyacen a la ejecución de programas en una computadora real.</p>
 
-
-
+<h2>¿Cuál cree que es el futuro de las máquinas virtuales?</h2>
+<p>Las máquinas virtuales han evolucionado significativamente en los últimos años y se han convertido en una herramienta esencial para muchos desarrolladores y empresas. Permitiendo a los usuarios ejecutar múltiples sistemas operativos en un solo hardware, lo que puede ser muy útil para probar aplicaciones, ejecutar software antiguo o incluso mejorar la seguridad.
+En cuanto al futuro de las máquinas virtuales, es difícil predecir con certeza cómo evolucionarán, es probable que se vuelvan más fáciles de usar y más accesibles para los usuarios comunes. Al ser utilizada por personas no especializadas de diferentes campos de conocimiento, es posible que se vea ampliado el panorama de funcionalidades y utilidades que se puedan implementar por medio de esta. </p>
 
 
