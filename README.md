@@ -396,4 +396,15 @@ explica la función "comp_entry," que convierte instrucciones legibles por human
 <p>Las máquinas virtuales han evolucionado significativamente en los últimos años y se han convertido en una herramienta esencial para muchos desarrolladores y empresas. Permitiendo a los usuarios ejecutar múltiples sistemas operativos en un solo hardware, lo que puede ser muy útil para probar aplicaciones, ejecutar software antiguo o incluso mejorar la seguridad.
 En cuanto al futuro de las máquinas virtuales, es difícil predecir con certeza cómo evolucionarán, es probable que se vuelvan más fáciles de usar y más accesibles para los usuarios comunes. Al ser utilizada por personas no especializadas de diferentes campos de conocimiento, es posible que se vea ampliado el panorama de funcionalidades y utilidades que se puedan implementar por medio de esta. </p>
 
+<p>se propone implementar la API básica de un traductor de VM en dos etapas. Esto permitirá realizar pruebas unitarias incrementales de la implementación utilizando programas de prueba proporcionados. Cuando se menciona que el traductor de VM debe implementar un comando de VM, significa que debe traducir ese comando en una secuencia de comandos de ensamblaje Hack que realice la misma tarea. </p>
 
+<p>Etapa I: Manejo de comandos aritméticos de pila
+En esta etapa, se debe implementar la primera versión del traductor de VM básico, enfocándose en los comandos aritméticos y lógicos del lenguaje de VM. También se debe implementar el comando push constante x, que permite agregar un valor constante a la pila. Este comando es útil para probar la implementación de los comandos aritméticos/lógicos de VM. Por ejemplo, se puede probar la implementación del comando agregar VM utilizando los comandos push constante 3, push constante 5 y agregar. Los demás comandos aritméticos y lógicos se prueban de manera similar.</p>
+
+<p>Etapa II: Manejo de comandos de acceso a memoria
+En esta etapa, se debe implementar una versión completa del traductor de VM básico que maneje los comandos push y pop del lenguaje VM, abarcando los ocho segmentos de memoria descritos en el capítulo 7. Se sugiere dividir esta etapa en subetapas:</p>
+
+<p>Se empieza manejando el segmento constante.
+A continuación, se manejan los segmentos local, argumento, esto y aquello.
+Luego, se manejan los segmentos de puntero y temporales, permitiendo en particular la modificación de las bases de los segmentos esto y aquello.
+Finalmente, se maneja el segmento estático.</p>
