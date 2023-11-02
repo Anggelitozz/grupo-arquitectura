@@ -388,5 +388,10 @@ explica la función "comp_entry," que convierte instrucciones legibles por human
 <h2>Parte 4</h2>
 <p> Se implemento un módulo de ensamblaje de nivel superior en C++. El módulo toma como parámetros la fuente del código de ensamblaje y un archivo opcional de código de máquina de destino. Si no se especifica un archivo de destino, se utiliza el mismo nombre de archivo que el de ensamblaje, con la extensión ".asm" cambiada a ".hack". El proceso comienza con una comprobación de parámetros y luego procesa el código en dos pasadas: la primera para manejar etiquetas y la segunda para generar el código de máquina final. Durante la primera pasada, se eliminan los comentarios y espacios en blanco, y las líneas se almacenan en una cola. Las etiquetas se agregan a una tabla de símbolos. En la segunda pasada, se procesan las líneas, se genera el código de máquina y se almacena en un archivo de salida.Se copila y ejecuta el ensamblador, con opciones para especificar ubicación y nombre de archivo de salida personalizados. El enfoque en la eliminación de comentarios y espacios en blanco es esencial para el funcionamiento correcto del ensamblador. El video ofrece detalles técnicos sobre el proceso de ensamblaje y manipulación del código fuente en un proyecto de ensamblador.</p>
 
+# PRACTICA 05
+<p>Esta práctica presenta el desarrollo de dos proyectos del curso Nand to Tetris. El proyecto 7 se enfoca en la implementación de una máquina virtual que permite ejecutar programas escritos en un lenguaje de alto nivel llamado Jack. En cuanto al proyecto 8, este se ocupa del control computacional, es decir, de las estructuras de programación que permiten realizar saltos condicionales y bucles. En ambos proyectos se utiliza el stack aritmético, una estructura de datos que facilita la manipulación de valores numéricos y lógicos. El objetivo de estos proyectos es comprender los principios y mecanismos que subyacen a la ejecución de programas en una computadora real.</p>
+
+
+
 
 
