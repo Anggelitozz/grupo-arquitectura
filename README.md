@@ -1,91 +1,134 @@
-# PRACTICA 05
-<p>Esta practica presenta el desarrollo de dos proyectos del curso Nand to Tetris. El proyecto 7 se enfoca en la implementación de una máquina virtual que permite ejecutar programas escritos en un lenguaje de alto nivel llamado Jack. En cuanto al proyecto 8, se ocupa del control computacional, es decir, de las estructuras de programación que permiten realizar saltos condicionales y bucles. En ambos proyectos se utiliza el stack aritmético, una estructura de datos que facilita la manipulación de valores numéricos y lógicos. El objetivo de estos proyectos es comprender los principios y mecanismos que subyacen a la ejecución de programas en una computadora real.</p>
+# PRACTICA 01
+## PROYECTO-01: Lógica Booleana
+En el proyecto que presentamos a continuación, se llevará a cabo la implementación de una serie de compuertas lógicas utilizando la plataforma Nand2Tetris. Estas compuertas lógicas son componentes fundamentales de la electrónica digital y la informática, desempeñando un papel crucial en la construcción de circuitos y sistemas digitales. A través de este trabajo, exploraremos la creación y funcionalidad de estas compuertas, demostrando cómo pueden combinarse para realizar operaciones lógicas más complejas.
 
+### Funcion NOT
+<img style="height:150px" src="./01/diagramas/not">
+<p>Su función principal es invertir una señal de entrada binaria, cambia un 1 en un 0 y viceversa.</p>
 
+### Funcion OR
+<img style="height:150px" src="./01/diagramas/or.png">
+<p>Esta función tiene al menos dos entradas y una sola salida, se conoce como la compuerta suma. La tabla de verdad de una compuerta OR muestra cómo se comporta en función de las entradas:</p>
+<ul>
+  <li>Si al menos una de las entradas es 1, la salida es 1</li>
+  <li>Solo si todas las entradas son 0, la salida es 0</li>
+</ul>
 
-# PRACTICA 04
-<h2>Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan?</h2>
-<p>Una limitante que observamos es que el ensamblador de Hack solo puede traducir programas escritos en el lenguaje ensamblador simbólico Hack, que es un lenguaje específico para la máquina Hack. Esto significa que no podemos usar el ensamblador para traducir programas escritos en otros lenguajes ensambladores más complejos, como el lenguaje ensamblador x86 o el lenguaje ensamblador ARM. Además, el ensamblador de Hack no tiene ninguna funcionalidad avanzada, como optimización de código, manejo de errores o generación de reportes. Estas limitaciones pueden dificultar el desarrollo y la depuración de programas más sofisticados o portables. </p>
+### Funcion AND
+<img style="height:150px" src="./01/diagramas/and.png">
+<p>Esta función presenta dos entradas y una sola salida, su funcionamiento es similar a una multiplicación de entradas. La tabla de verdad de una compuerta AND muestra cómo se comporta en función de las entradas:</p>
+<ul>
+  <li>La salida es 1 solo si todas las entradas son 1</li>
+  <li>Si alguna de las entradas es 0, la salida es 0</li>
+</ul>
 
-## Proyecto-06: El ensamblador
-<h2>Parte 1</h2>
-<p> El ensamblador se divide en cuatro módulos y funciona en dos pasadas. En la primera pasada, se crea una tabla de símbolos para hacer un seguimiento de las etiquetas y asignar direcciones de memoria. En la segunda y tercera pasadas, se analizan las instrucciones, se traducen a códigos binarios y se almacenan en una cola. Luego, se realiza una tercera pasada para construir las instrucciones finales. Se utiliza C++ para la implementación debido a su orientación a objetos y la capacidad de utilizar la Biblioteca de Plantillas Estándar (STL), que incluye mapas y colas. El ensamblador convierte el código ensamblador legible por humanos en instrucciones binarias ejecutables por la máquina.</p>
+### Funcion XOR
+<img style="height:150px" src="./01/diagramas/xor.png">
+<p>Esta función presenta dos entradas y una sola salida, también llamado OR exclusivo. La tabla de verdad de una compuerta XOR muestra cómo se comporta en función de las entradas:</p>
+<ul>
+  <li>La salida es 1 cuando un número impar de entradas son 1</li>
+  <li>Si el número de entradas 1 es par, la salida es 0</li>
+</ul>
 
-<h2>Parte 2</h2>
-<p> Se implementa la clase SymbolTable en C++ para el ensamblador del lenguaje de programación Hack. La clase SymbolTable se utiliza para mantener un seguimiento de las etiquetas y variables en el código ensamblador. El código se divide en varias funciones, como el constructor, destructor, addLabel, addVariable y lookupSymbol. Estas funciones permiten agregar etiquetas y variables al SymbolTable y buscar la dirección de memoria correspondiente. La implementación de la clase se presenta en el archivo de encabezado "symboltable.hpp".</p>
-
-<h2>Parte 3</h2>
-<p>se presenta un módulo de rompecabezas en el contexto de un programa de ensamblador. El objetivo principal es traducir instrucciones de ensamblaje a instrucciones binarias. Se menciona que, en este diseño, el código se integra como parte del analizador en lugar de estar en secciones separadas. Se muestra una instancia de la clase de rompecabezas y se explica que depende de la tabla de ejemplos. Esta tabla de ejemplos se incluye en la clase de rompecabezas, lo que permite el acceso a símbolos predefinidos. El programa utiliza tres diccionarios privados para realizar la traducción: uno para las instrucciones de cómputo, otro para las instrucciones de destino y un tercero para las instrucciones de salto. Se señala que las instrucciones de tipo A tienen un prefijo constante de cero, mientras que las de tipo C tienen un prefijo constante de uno.
-
-explica la función "comp_entry," que convierte instrucciones legibles por humanos en secuencias binarias, y menciona que se puede definir un valor predeterminado si la instrucción no se encuentra en el diccionario. Se destaca que el programa maneja nuevas variables, agregándolas a la tabla de símbolos y asignándoles direcciones binarias de 15 bits si son desconocidas. Luego, se detalla cómo se procesan las instrucciones de tipo A y C, dividiéndolas en partes y buscando estas partes en los diccionarios para ensamblar la instrucción binaria final. Finalmente, se anuncia que este video es la primera parte y se adelanta que el próximo video cubrirá la última parte del ensamblador. En resumen, el video aborda cómo se realiza la traducción de instrucciones de ensamblaje a binario mediante un programa de ensamblador y cómo se configuran las tablas de referencia y se efectúan las conversiones.</p>
-
-<h2>Parte 4</h2>
-<p> Se implemento un módulo de ensamblaje de nivel superior en C++. El módulo toma como parámetros la fuente del código de ensamblaje y un archivo opcional de código de máquina de destino. Si no se especifica un archivo de destino, se utiliza el mismo nombre de archivo que el de ensamblaje, con la extensión ".asm" cambiada a ".hack". El proceso comienza con una comprobación de parámetros y luego procesa el código en dos pasadas: la primera para manejar etiquetas y la segunda para generar el código de máquina final. Durante la primera pasada, se eliminan los comentarios y espacios en blanco, y las líneas se almacenan en una cola. Las etiquetas se agregan a una tabla de símbolos. En la segunda pasada, se procesan las líneas, se genera el código de máquina y se almacena en un archivo de salida.Se copila y ejecuta el ensamblador, con opciones para especificar ubicación y nombre de archivo de salida personalizados. El enfoque en la eliminación de comentarios y espacios en blanco es esencial para el funcionamiento correcto del ensamblador. El video ofrece detalles técnicos sobre el proceso de ensamblaje y manipulación del código fuente en un proyecto de ensamblador.</p>
-
-# PRACTICA 03
-<h2>¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?</h2>
-<p>El lenguaje de máquina es relevante porque brinda un canal de comunicación directo, permitiendo la interacción entre el programador y la capa física, es decir el hardware subyacente. 
-Es un pilar importante para la arquitectura computacional al ser un sistema de códigos que pueden ser interpretados por 
-circuitos micro programables que se encargan de determinar cuáles son las acciones que deben de ser realizadas por una máquina. 
-Para comprender este lenguaje de bajo nivel es necesario comprender a grandes rasgos el funcionamiento del hardware, 
-con esto se es posible desarrollar sistemas operativos y compiladores que permitan interpretar al lenguaje máquina los lenguajes de alto nivel.
+### Funcion MUX
+<img style="height:150px" src="./01/diagramas/MUX.png">
+<p>Esta función multiplexor toma de salida a si el selector es 0 o  toma la entrada b si el selector es 1,
+  entonces se utilizan una nand de dos nands que una tiene a y el selector negado y la otra una nand que
+  tiene b y el selector
 </p>
 
-## Proyecto-04: Lenguaje de Máquina
-### Mult.asm
-<p>se refiere a un archivo que contiene código fuente escrito en lenguaje ensamblador para implementar una operación de multiplicación en una arquitectura de computadora específica. Este archivo suele ser parte de un proyecto o programa más grande que requiere realizar multiplicaciones.El contenido exacto de un archivo "mult.asm" variará según la arquitectura de la computadora para la que se esté escribiendo y los detalles de implementación específicos. El código ensamblador se utiliza para programar a nivel de bajo nivel y se traduce directamente en instrucciones de máquina que la CPU puede ejecutar. La implementación de la multiplicación en lenguaje ensamblador puede variar significativamente según la arquitectura del procesador y las convenciones de programación utilizadas.</p>
+### Funcion MUX16
+<img style="height:150px" src="./diagramas/MUX16.png">
+<p>Esta Función toma un array de 16 entradas de a y b donde al evaluar
+  la función MUX retorna un array de 16 salidas, dependiendo si el selector es 0 el array de la
+  salida es igual al array de entradas a si entonces el selector es 1 el array de salidas es igual
+  al array de entradas b
+</p>
 
-<p>Las entradas de este programa son los valores almacenados en R0
-y R1 (RAM[0] y RAM[1]). El programa calcula el producto R0 * R1 y almacena el resultado en
-R2 (RAM[2]). Suponga que R0 ≥ 0, R1 ≥ 0 y R0 * R1 < 32768 (su programa no necesita probar estos
-condiciones). El script Multi.test y el archivo de comparación Mult.cmp suministrados están diseñados para probar su
-programa sobre algunos valores representativos.</p>
+### Funcion MUX4WAY16
+<img style="height:400px" src="./01/diagramas/MUX4WAY16.png">
+<p>Esta Función toma 4 arrays de 16 entradas cada uno, recibe dos selectores, concantenado la salida de dos compuertas MUX16 unidas al selector 1 a una MUX16 unida al selector 2 de tal manera que:
+</p>
+<ul>
+  <li>Si en el primer selector recibe 0 y el segundo 0 el array de 16 salidas sera igual al array de 16 de entradas de a</li>
+  <li>Si en el primer selector recibe 0 y el segundo 1 el array de 16 salidas sera igual al array de 16 de entradas de b</li>
+  <li>Si en el primer selector recibe 1 y el segundo 0 el array de 16 salidas sera igual al array de 16 de entradas de c</li>
+  <li>Si en el primer selector recibe 1 y el segundo 1 el array de 16 salidas sera igual al array de 16 de entradas de d</li>
+</ul>
 
+### Funcion MUX8WAY16
+<img style="height:400px" src="./01/diagramas/MUX8WAY16.png">
+<p>Esta Función toma 8 arrays de 16 entradas cada uno, recibe tres selectores, concantenado la salida de dos compuertas MUX4WAY16 unidas al selector 1y2 a una MUX16 unida al selector 3 de tal manera que:
+</p>
+<ul>
+  <li>Si en el primer selector recibe 0 , el segundo 0 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de a</li>
+  <li>Si en el primer selector recibe 0 , el segundo 0 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de b</li>
+  <li>Si en el primer selector recibe 0 , el segundo 1 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de c</li>
+  <li>Si en el primer selector recibe 0 , el segundo 1 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de d</li>
+  <li>Si en el primer selector recibe 1 , el segundo 0 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de e</li>
+  <li>Si en el primer selector recibe 1 , el segundo 0 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de f</li>
+  <li>Si en el primer selector recibe 1, el segundo 1 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de g</li>
+  <li>Si en el primer selector recibe 1 , el segundo 1 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de h</li>
+</ul>
 
-### Fill.asm
+### Funcion DMUX
+<img style="height:150px" src="./01/diagramas/DMUX.png">
+<p>Para la creación del Demultiplexor(DMUX) se emplean 5 NANDs o 2 NANDs y una NOT, tiene 1 entrada y s1 que es una señal de control y dos salidas
+</p>
+<h1>Funcion DMUX4WAY</h1>
+<img style="height:400px" src="./01/diagramas/DMUX4WAY.png">
+<p>Para el demultiplexor de 4 vías se usan 3 demultiplexores, tiene 1 entrada, dos señales de control y 4 salidas
+</ul>
+<h1>Funcion DMUX8WAY</h1>
+<img style="height:400px" src="./01/diagramas/DMUX8WAY.png">
+Para el demultiplexor de 4 vías se usan 3 demultiplexores, tiene 1 entrada, 3 señales de control y 8 salidas
 
-<p>El archivo "fill.asm" generalmente se utiliza para llenar una región de memoria con un valor específico. Su propósito principal es inicializar o configurar una parte de la memoria con datos predeterminados antes de que un programa o sistema operativo comience a utilizarla.
+### NOT16
+<img style="height:400px" src="./01/diagramas/NOT16.png">
+<p>La función de una compuerta Not16 es invertir lógicamente cada uno de los 16 bits de entrada. En otras palabras, toma una entrada de 16 bits y produce una salida de 16 bits donde cada bit de salida es el complemento del bit de entrada correspondiente.
+</p>
 
-En un programa en lenguaje ensamblador como el que proporcioné anteriormente, el archivo "fill.asm" contiene el código necesario para realizar esta tarea.</p>
-
-<p>
-  Este programa ejecuta un bucle infinito que escucha la
-teclado. Cuando se presiona una tecla (cualquier tecla), el programa oscurece toda la pantalla escribiendo
-"negro" en cada píxel. Cuando no se presiona ninguna tecla, el programa borra la pantalla escribiendo "blanco" en
-cada píxel. Puede optar por oscurecer y borrar la pantalla en cualquier patrón espacial, siempre que
-presionar una tecla continuamente durante el tiempo suficiente resultará en una pantalla completamente negra, y no presionar
-cualquier tecla durante el tiempo suficiente dará como resultado una pantalla limpia. Este programa tiene un script de prueba (Fill.tst) pero no
-comparar archivo: debe verificarse inspeccionando visiblemente la pantalla simulada en el emulador de CPU.
-Escribirás estos programas ensambladores usando un editor de texto plano, los traducirás a Hack binario
-código usando un ensamblador y ejecutarlos usando un emulador de CPU.
+  
+### OR16
+<img style="height:400px" src="./01/diagramas/OR16.png">
+<p>La función de una compuerta Or16 es realizar una operación lógica OR en paralelo en cada uno de los 16 bits de entrada. En otras palabras, toma dos entradas de 16 bits (a y b) y produce una salida de 16 bits (out), donde cada bit de salida es el resultado de la operación lógica OR aplicada a los bits correspondientes de a y b.
 </p>
 
 
-## PROYECTO-05: Arquitectura de Computadores
-### Memory
-<p>Es un componente de hardware que se utiliza para almacenar datos y programas en una computadora. El chip consta de tres partes principales: RAM16K, Screen y Keyboard, La pantalla y el teclado están disponibles como chips integrados, por lo tanto, no es necesario implementarla. Para la elaboración de este chip es importante la utilización de el chip RAM16K eleborado en la práctica anterior, esto facilita la construcción de la función.
-La RAM16K es un chip que se utiliza para almacenar datos en la memoria de acceso aleatorio (RAM) de la computadora, tiene una capacidad de 16384 palabras de 16 bits cada una, lo que equivale a 16 kilobytes de 
-memoria. La pantalla es un dispositivo de salida que muestra información visual al usuario, mientras que el teclado es un dispositivo de entrada que permite al usuario ingresar datos en la computadora.</p>
-
-### CPU
-<p> Finalmente la CPU es la que recoje las intrucciones en Lenguaje máquina para poder hacer operaciones, por eso es que cada bit de la instrucción es un operador que la CPU interpreta bien sean
-operaciones de la ALU, los operadores del Lenguaje de Ensamble como JEQ, JLE, JGT, JLT y como los registros A,D y M que son operandos dentro de la Ejecución de la CPU , guardando la respuesta en una dirección en Memoria del registro</p>
-
-### Computer
-
-<p> Tenemos los componentes básico para conformar una computadora que es una Memoria y una CPU, La memoria almacena en todas sus direcciones en memoria los registros de Lenguaje de Ensamble,
-y carga los registros anteriores a la CPU que procesa las instrucciones despues que el ROM reciba las instrucciones en Lenguaje de Ensable para compilarlo en Instrucciones de Lenguaje de Máquina posteriormente
-guarda el resultado en los registro de la Memoria para seguir procesando las intrucciones siguiente en Lenguaje de máquina</p>
-
-# PRACTICA 02
-<h2>¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?</h2>
-<p>En la lógica aritmética se evidencian las funciones básicas del computador al ejecutar operaciones de suma y resta de las entradas 
-desde un punto de vista bit a bit, toda la lógica para realizar operaciones matematicas y lógicas se encuentra en la ALU.
-Mientras que en la lógica secuencial nos muestra como el computador almacena sus valores en memoria, y como es posible cambiar y consultar estos valores.</p>
-<h2>Explique las principales diferencias entre la lógica aritmética y la lógica secuencial</h2>
-<p>La principal diferencia se basa en la realimentación que existe en sus compuertas para guardar valores en memoria para posteriores operaciones,
-mientras que en la lógica aritmética las entrada de una compuerta depende de la salidas de otra.
+### OR8WAY
+<img style="height:400px" src="./01/diagramas/OR8WAY.png">
+<p>La función de una compuerta Or8Way es realizar una operación lógica OR en ocho bits de entrada de manera que la salida sea 1 si al menos uno de los bits de entrada es 1, y 0 si todos los bits de entrada son 0. En otras palabras, Or8Way toma ocho entradas y produce una sola salida, donde la salida será 1 si al menos una de las entradas es 1, y 0 solo si todas las entradas son 0.
 </p>
+
+  
+### AND16
+<img style="height:400px" src="./01/diagramas/AND16.png">
+<p>La función de una compuerta And16 es realizar una operación lógica AND en paralelo en cada uno de los 16 bits de entrada. En otras palabras, toma dos entradas de 16 bits (a y b) y produce una salida de 16 bits (out), donde cada bit de salida es el resultado de la operación lógica AND aplicada a los bits correspondientes de a y b.
+</p>
+
+## PROYECTO-02: Lógica Aritmética
+### HalfAdder
+<img style="height:100px" src="./02/diagramas/HalfAdder.png">
+HalfAdder se utiliza para realizar la suma binaria de dos números binarios de un solo bit. Tiene dos entradas, A y B, y dos salidas, SUM y CARRY. La salida SUM es el bit menos significativo (LSB) del resultado, mientras que la salida CARRY es el bit más significativo (MSB) del resultado, indicando si hubo un acarreo en la suma de las dos entradas. La compuerta se implementó utilizando las compuertas XOR y AND.
+
+### FullAdder
+<img style="height:200px" src="./02/diagramas/Fulladder.png">
+Full Adder se utiliza para sumar tres bits de entrada y producir dos bits de salida. Las dos entradas estándar son A y B, mientras que la tercera entrada es el acarreo de entrada (CARRY_IN). La salida SUM es el resultado de la suma de los tres bits de entrada, mientras que la salida CARRY_OUT indica si hubo un acarreo en la suma. La compuerta se implementó utilizando las compuertas XOR, AND y OR.
+
+### Add16
+<img style="height:100px" src="./02/diagramas/Add16.png">
+El Add16 realiza la suma de dos números binarios de 16 bits. Está compuesto por una serie de FullAdders y HalfAdders interconectados, utiliza estos componentes para realizar la suma bit a bit de los números de entrada.
+
+### Inc16
+<img style="height:250px" src="./02/diagramas/Inc16.jpeg">
+El Inc16 incrementa en uno un número binario de 16 bits. Esencialmente, el Inc16 es una versión modificada del Add16, se utiliza este para realizar la suma de entrada y luego agrega un bit adicional para manejar el acarreo.
+
+### ALU
+<img style="height:400px" src="./02/diagramas/ALU.png">
+ALU funciona de manera condicional sobre ambas entradas X y Y ambas de 16 bits si se niegan o simplemente cero,
+hay un selector que decide sobre la suma o el AND de ambos resultados y finalmente para mirar si el resultado es
+cero se hacen operaciones or anidadas de todas las posiciones del resultado y  se coge el ultimo bit para mirar el
+signo de esta operación.
 
 ## PROYECTO-03: Lógica Secuencial
 ### DFF
@@ -260,135 +303,88 @@ mientras que en la lógica aritmética las entrada de una compuerta depende de l
 <img style="height:100px" src="./03/Diagramas IMG/RAM.png">
 Cada RAM es una construcción de una cantidad específica de RAMs anterior
 
-## PROYECTO-02: Lógica Aritmética
-### HalfAdder
-<img style="height:100px" src="./02/diagramas/HalfAdder.png">
-HalfAdder se utiliza para realizar la suma binaria de dos números binarios de un solo bit. Tiene dos entradas, A y B, y dos salidas, SUM y CARRY. La salida SUM es el bit menos significativo (LSB) del resultado, mientras que la salida CARRY es el bit más significativo (MSB) del resultado, indicando si hubo un acarreo en la suma de las dos entradas. La compuerta se implementó utilizando las compuertas XOR y AND.
-
-### FullAdder
-<img style="height:200px" src="./02/diagramas/Fulladder.png">
-Full Adder se utiliza para sumar tres bits de entrada y producir dos bits de salida. Las dos entradas estándar son A y B, mientras que la tercera entrada es el acarreo de entrada (CARRY_IN). La salida SUM es el resultado de la suma de los tres bits de entrada, mientras que la salida CARRY_OUT indica si hubo un acarreo en la suma. La compuerta se implementó utilizando las compuertas XOR, AND y OR.
-
-### Add16
-<img style="height:100px" src="./02/diagramas/Add16.png">
-El Add16 realiza la suma de dos números binarios de 16 bits. Está compuesto por una serie de FullAdders y HalfAdders interconectados, utiliza estos componentes para realizar la suma bit a bit de los números de entrada.
-
-### Inc16
-<img style="height:250px" src="./02/diagramas/Inc16.jpeg">
-El Inc16 incrementa en uno un número binario de 16 bits. Esencialmente, el Inc16 es una versión modificada del Add16, se utiliza este para realizar la suma de entrada y luego agrega un bit adicional para manejar el acarreo.
-
-### ALU
-<img style="height:400px" src="./02/diagramas/ALU.png">
-ALU funciona de manera condicional sobre ambas entradas X y Y ambas de 16 bits si se niegan o simplemente cero,
-hay un selector que decide sobre la suma o el AND de ambos resultados y finalmente para mirar si el resultado es
-cero se hacen operaciones or anidadas de todas las posiciones del resultado y  se coge el ultimo bit para mirar el
-signo de esta operación.
-
-# PRACTICA 01
-## PROYECTO-01: Lógica Booleana
-En el proyecto que presentamos a continuación, se llevará a cabo la implementación de una serie de compuertas lógicas utilizando la plataforma Nand2Tetris. Estas compuertas lógicas son componentes fundamentales de la electrónica digital y la informática, desempeñando un papel crucial en la construcción de circuitos y sistemas digitales. A través de este trabajo, exploraremos la creación y funcionalidad de estas compuertas, demostrando cómo pueden combinarse para realizar operaciones lógicas más complejas.
-
-### Funcion NOT
-<img style="height:150px" src="./01/diagramas/not">
-<p>Su función principal es invertir una señal de entrada binaria, cambia un 1 en un 0 y viceversa.</p>
-
-### Funcion OR
-<img style="height:150px" src="./01/diagramas/or.png">
-<p>Esta función tiene al menos dos entradas y una sola salida, se conoce como la compuerta suma. La tabla de verdad de una compuerta OR muestra cómo se comporta en función de las entradas:</p>
-<ul>
-  <li>Si al menos una de las entradas es 1, la salida es 1</li>
-  <li>Solo si todas las entradas son 0, la salida es 0</li>
-</ul>
-
-### Funcion AND
-<img style="height:150px" src="./01/diagramas/and.png">
-<p>Esta función presenta dos entradas y una sola salida, su funcionamiento es similar a una multiplicación de entradas. La tabla de verdad de una compuerta AND muestra cómo se comporta en función de las entradas:</p>
-<ul>
-  <li>La salida es 1 solo si todas las entradas son 1</li>
-  <li>Si alguna de las entradas es 0, la salida es 0</li>
-</ul>
-
-### Funcion XOR
-<img style="height:150px" src="./01/diagramas/xor.png">
-<p>Esta función presenta dos entradas y una sola salida, también llamado OR exclusivo. La tabla de verdad de una compuerta XOR muestra cómo se comporta en función de las entradas:</p>
-<ul>
-  <li>La salida es 1 cuando un número impar de entradas son 1</li>
-  <li>Si el número de entradas 1 es par, la salida es 0</li>
-</ul>
-
-### Funcion MUX
-<img style="height:150px" src="./01/diagramas/MUX.png">
-<p>Esta función multiplexor toma de salida a si el selector es 0 o  toma la entrada b si el selector es 1,
-  entonces se utilizan una nand de dos nands que una tiene a y el selector negado y la otra una nand que
-  tiene b y el selector
+# PRACTICA 02
+<h2>¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?</h2>
+<p>En la lógica aritmética se evidencian las funciones básicas del computador al ejecutar operaciones de suma y resta de las entradas 
+desde un punto de vista bit a bit, toda la lógica para realizar operaciones matematicas y lógicas se encuentra en la ALU.
+Mientras que en la lógica secuencial nos muestra como el computador almacena sus valores en memoria, y como es posible cambiar y consultar estos valores.</p>
+<h2>Explique las principales diferencias entre la lógica aritmética y la lógica secuencial</h2>
+<p>La principal diferencia se basa en la realimentación que existe en sus compuertas para guardar valores en memoria para posteriores operaciones,
+mientras que en la lógica aritmética las entrada de una compuerta depende de la salidas de otra.
 </p>
 
-### Funcion MUX16
-<img style="height:150px" src="./diagramas/MUX16.png">
-<p>Esta Función toma un array de 16 entradas de a y b donde al evaluar
-  la función MUX retorna un array de 16 salidas, dependiendo si el selector es 0 el array de la
-  salida es igual al array de entradas a si entonces el selector es 1 el array de salidas es igual
-  al array de entradas b
+# PRACTICA 03
+<h2>¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?</h2>
+<p>El lenguaje de máquina es relevante porque brinda un canal de comunicación directo, permitiendo la interacción entre el programador y la capa física, es decir el hardware subyacente. 
+Es un pilar importante para la arquitectura computacional al ser un sistema de códigos que pueden ser interpretados por 
+circuitos micro programables que se encargan de determinar cuáles son las acciones que deben de ser realizadas por una máquina. 
+Para comprender este lenguaje de bajo nivel es necesario comprender a grandes rasgos el funcionamiento del hardware, 
+con esto se es posible desarrollar sistemas operativos y compiladores que permitan interpretar al lenguaje máquina los lenguajes de alto nivel.
 </p>
 
-### Funcion MUX4WAY16
-<img style="height:400px" src="./01/diagramas/MUX4WAY16.png">
-<p>Esta Función toma 4 arrays de 16 entradas cada uno, recibe dos selectores, concantenado la salida de dos compuertas MUX16 unidas al selector 1 a una MUX16 unida al selector 2 de tal manera que:
-</p>
-<ul>
-  <li>Si en el primer selector recibe 0 y el segundo 0 el array de 16 salidas sera igual al array de 16 de entradas de a</li>
-  <li>Si en el primer selector recibe 0 y el segundo 1 el array de 16 salidas sera igual al array de 16 de entradas de b</li>
-  <li>Si en el primer selector recibe 1 y el segundo 0 el array de 16 salidas sera igual al array de 16 de entradas de c</li>
-  <li>Si en el primer selector recibe 1 y el segundo 1 el array de 16 salidas sera igual al array de 16 de entradas de d</li>
-</ul>
+# PRACTICA 04
+<h2>Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan?</h2>
+<p>Una limitante que observamos es que el ensamblador de Hack solo puede traducir programas escritos en el lenguaje ensamblador simbólico Hack, que es un lenguaje específico para la máquina Hack. Esto significa que no podemos usar el ensamblador para traducir programas escritos en otros lenguajes ensambladores más complejos, como el lenguaje ensamblador x86 o el lenguaje ensamblador ARM. Además, el ensamblador de Hack no tiene ninguna funcionalidad avanzada, como optimización de código, manejo de errores o generación de reportes. Estas limitaciones pueden dificultar el desarrollo y la depuración de programas más sofisticados o portables. </p>
 
-### Funcion MUX8WAY16
-<img style="height:400px" src="./01/diagramas/MUX8WAY16.png">
-<p>Esta Función toma 8 arrays de 16 entradas cada uno, recibe tres selectores, concantenado la salida de dos compuertas MUX4WAY16 unidas al selector 1y2 a una MUX16 unida al selector 3 de tal manera que:
-</p>
-<ul>
-  <li>Si en el primer selector recibe 0 , el segundo 0 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de a</li>
-  <li>Si en el primer selector recibe 0 , el segundo 0 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de b</li>
-  <li>Si en el primer selector recibe 0 , el segundo 1 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de c</li>
-  <li>Si en el primer selector recibe 0 , el segundo 1 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de d</li>
-  <li>Si en el primer selector recibe 1 , el segundo 0 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de e</li>
-  <li>Si en el primer selector recibe 1 , el segundo 0 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de f</li>
-  <li>Si en el primer selector recibe 1, el segundo 1 y el tercero 0 el array de 16 salidas sera igual al array de 16 de entradas de g</li>
-  <li>Si en el primer selector recibe 1 , el segundo 1 y el tercero 1 el array de 16 salidas sera igual al array de 16 de entradas de h</li>
-</ul>
+## Proyecto-04: Lenguaje de Máquina
+### Mult.asm
+<p>se refiere a un archivo que contiene código fuente escrito en lenguaje ensamblador para implementar una operación de multiplicación en una arquitectura de computadora específica. Este archivo suele ser parte de un proyecto o programa más grande que requiere realizar multiplicaciones.El contenido exacto de un archivo "mult.asm" variará según la arquitectura de la computadora para la que se esté escribiendo y los detalles de implementación específicos. El código ensamblador se utiliza para programar a nivel de bajo nivel y se traduce directamente en instrucciones de máquina que la CPU puede ejecutar. La implementación de la multiplicación en lenguaje ensamblador puede variar significativamente según la arquitectura del procesador y las convenciones de programación utilizadas.</p>
 
-### Funcion DMUX
-<img style="height:150px" src="./01/diagramas/DMUX.png">
-<p>Para la creación del Demultiplexor(DMUX) se emplean 5 NANDs o 2 NANDs y una NOT, tiene 1 entrada y s1 que es una señal de control y dos salidas
-</p>
-<h1>Funcion DMUX4WAY</h1>
-<img style="height:400px" src="./01/diagramas/DMUX4WAY.png">
-<p>Para el demultiplexor de 4 vías se usan 3 demultiplexores, tiene 1 entrada, dos señales de control y 4 salidas
-</ul>
-<h1>Funcion DMUX8WAY</h1>
-<img style="height:400px" src="./01/diagramas/DMUX8WAY.png">
-Para el demultiplexor de 4 vías se usan 3 demultiplexores, tiene 1 entrada, 3 señales de control y 8 salidas
-
-### NOT16
-<img style="height:400px" src="./01/diagramas/NOT16.png">
-<p>La función de una compuerta Not16 es invertir lógicamente cada uno de los 16 bits de entrada. En otras palabras, toma una entrada de 16 bits y produce una salida de 16 bits donde cada bit de salida es el complemento del bit de entrada correspondiente.
-</p>
-
-  
-### OR16
-<img style="height:400px" src="./01/diagramas/OR16.png">
-<p>La función de una compuerta Or16 es realizar una operación lógica OR en paralelo en cada uno de los 16 bits de entrada. En otras palabras, toma dos entradas de 16 bits (a y b) y produce una salida de 16 bits (out), donde cada bit de salida es el resultado de la operación lógica OR aplicada a los bits correspondientes de a y b.
-</p>
+<p>Las entradas de este programa son los valores almacenados en R0
+y R1 (RAM[0] y RAM[1]). El programa calcula el producto R0 * R1 y almacena el resultado en
+R2 (RAM[2]). Suponga que R0 ≥ 0, R1 ≥ 0 y R0 * R1 < 32768 (su programa no necesita probar estos
+condiciones). El script Multi.test y el archivo de comparación Mult.cmp suministrados están diseñados para probar su
+programa sobre algunos valores representativos.</p>
 
 
-### OR8WAY
-<img style="height:400px" src="./01/diagramas/OR8WAY.png">
-<p>La función de una compuerta Or8Way es realizar una operación lógica OR en ocho bits de entrada de manera que la salida sea 1 si al menos uno de los bits de entrada es 1, y 0 si todos los bits de entrada son 0. En otras palabras, Or8Way toma ocho entradas y produce una sola salida, donde la salida será 1 si al menos una de las entradas es 1, y 0 solo si todas las entradas son 0.
+### Fill.asm
+
+<p>El archivo "fill.asm" generalmente se utiliza para llenar una región de memoria con un valor específico. Su propósito principal es inicializar o configurar una parte de la memoria con datos predeterminados antes de que un programa o sistema operativo comience a utilizarla.
+
+En un programa en lenguaje ensamblador como el que proporcioné anteriormente, el archivo "fill.asm" contiene el código necesario para realizar esta tarea.</p>
+
+<p>
+  Este programa ejecuta un bucle infinito que escucha la
+teclado. Cuando se presiona una tecla (cualquier tecla), el programa oscurece toda la pantalla escribiendo
+"negro" en cada píxel. Cuando no se presiona ninguna tecla, el programa borra la pantalla escribiendo "blanco" en
+cada píxel. Puede optar por oscurecer y borrar la pantalla en cualquier patrón espacial, siempre que
+presionar una tecla continuamente durante el tiempo suficiente resultará en una pantalla completamente negra, y no presionar
+cualquier tecla durante el tiempo suficiente dará como resultado una pantalla limpia. Este programa tiene un script de prueba (Fill.tst) pero no
+comparar archivo: debe verificarse inspeccionando visiblemente la pantalla simulada en el emulador de CPU.
+Escribirás estos programas ensambladores usando un editor de texto plano, los traducirás a Hack binario
+código usando un ensamblador y ejecutarlos usando un emulador de CPU.
 </p>
 
-  
-### AND16
-<img style="height:400px" src="./01/diagramas/AND16.png">
-<p>La función de una compuerta And16 es realizar una operación lógica AND en paralelo en cada uno de los 16 bits de entrada. En otras palabras, toma dos entradas de 16 bits (a y b) y produce una salida de 16 bits (out), donde cada bit de salida es el resultado de la operación lógica AND aplicada a los bits correspondientes de a y b.
-</p>
+## PROYECTO-05: Arquitectura de Computadores
+### Memory
+<p>Es un componente de hardware que se utiliza para almacenar datos y programas en una computadora. El chip consta de tres partes principales: RAM16K, Screen y Keyboard, La pantalla y el teclado están disponibles como chips integrados, por lo tanto, no es necesario implementarla. Para la elaboración de este chip es importante la utilización de el chip RAM16K eleborado en la práctica anterior, esto facilita la construcción de la función.
+La RAM16K es un chip que se utiliza para almacenar datos en la memoria de acceso aleatorio (RAM) de la computadora, tiene una capacidad de 16384 palabras de 16 bits cada una, lo que equivale a 16 kilobytes de 
+memoria. La pantalla es un dispositivo de salida que muestra información visual al usuario, mientras que el teclado es un dispositivo de entrada que permite al usuario ingresar datos en la computadora.</p>
+
+### CPU
+<p> Finalmente la CPU es la que recoje las intrucciones en Lenguaje máquina para poder hacer operaciones, por eso es que cada bit de la instrucción es un operador que la CPU interpreta bien sean
+operaciones de la ALU, los operadores del Lenguaje de Ensamble como JEQ, JLE, JGT, JLT y como los registros A,D y M que son operandos dentro de la Ejecución de la CPU , guardando la respuesta en una dirección en Memoria del registro</p>
+
+### Computer
+
+<p> Tenemos los componentes básico para conformar una computadora que es una Memoria y una CPU, La memoria almacena en todas sus direcciones en memoria los registros de Lenguaje de Ensamble,
+y carga los registros anteriores a la CPU que procesa las instrucciones despues que el ROM reciba las instrucciones en Lenguaje de Ensable para compilarlo en Instrucciones de Lenguaje de Máquina posteriormente
+guarda el resultado en los registro de la Memoria para seguir procesando las intrucciones siguiente en Lenguaje de máquina</p>
+
+## Proyecto-06: El ensamblador
+<h2>Parte 1</h2>
+<p> El ensamblador se divide en cuatro módulos y funciona en dos pasadas. En la primera pasada, se crea una tabla de símbolos para hacer un seguimiento de las etiquetas y asignar direcciones de memoria. En la segunda y tercera pasadas, se analizan las instrucciones, se traducen a códigos binarios y se almacenan en una cola. Luego, se realiza una tercera pasada para construir las instrucciones finales. Se utiliza C++ para la implementación debido a su orientación a objetos y la capacidad de utilizar la Biblioteca de Plantillas Estándar (STL), que incluye mapas y colas. El ensamblador convierte el código ensamblador legible por humanos en instrucciones binarias ejecutables por la máquina.</p>
+
+<h2>Parte 2</h2>
+<p> Se implementa la clase SymbolTable en C++ para el ensamblador del lenguaje de programación Hack. La clase SymbolTable se utiliza para mantener un seguimiento de las etiquetas y variables en el código ensamblador. El código se divide en varias funciones, como el constructor, destructor, addLabel, addVariable y lookupSymbol. Estas funciones permiten agregar etiquetas y variables al SymbolTable y buscar la dirección de memoria correspondiente. La implementación de la clase se presenta en el archivo de encabezado "symboltable.hpp".</p>
+
+<h2>Parte 3</h2>
+<p>se presenta un módulo de rompecabezas en el contexto de un programa de ensamblador. El objetivo principal es traducir instrucciones de ensamblaje a instrucciones binarias. Se menciona que, en este diseño, el código se integra como parte del analizador en lugar de estar en secciones separadas. Se muestra una instancia de la clase de rompecabezas y se explica que depende de la tabla de ejemplos. Esta tabla de ejemplos se incluye en la clase de rompecabezas, lo que permite el acceso a símbolos predefinidos. El programa utiliza tres diccionarios privados para realizar la traducción: uno para las instrucciones de cómputo, otro para las instrucciones de destino y un tercero para las instrucciones de salto. Se señala que las instrucciones de tipo A tienen un prefijo constante de cero, mientras que las de tipo C tienen un prefijo constante de uno.
+
+explica la función "comp_entry," que convierte instrucciones legibles por humanos en secuencias binarias, y menciona que se puede definir un valor predeterminado si la instrucción no se encuentra en el diccionario. Se destaca que el programa maneja nuevas variables, agregándolas a la tabla de símbolos y asignándoles direcciones binarias de 15 bits si son desconocidas. Luego, se detalla cómo se procesan las instrucciones de tipo A y C, dividiéndolas en partes y buscando estas partes en los diccionarios para ensamblar la instrucción binaria final. Finalmente, se anuncia que este video es la primera parte y se adelanta que el próximo video cubrirá la última parte del ensamblador. En resumen, el video aborda cómo se realiza la traducción de instrucciones de ensamblaje a binario mediante un programa de ensamblador y cómo se configuran las tablas de referencia y se efectúan las conversiones.</p>
+
+<h2>Parte 4</h2>
+<p> Se implemento un módulo de ensamblaje de nivel superior en C++. El módulo toma como parámetros la fuente del código de ensamblaje y un archivo opcional de código de máquina de destino. Si no se especifica un archivo de destino, se utiliza el mismo nombre de archivo que el de ensamblaje, con la extensión ".asm" cambiada a ".hack". El proceso comienza con una comprobación de parámetros y luego procesa el código en dos pasadas: la primera para manejar etiquetas y la segunda para generar el código de máquina final. Durante la primera pasada, se eliminan los comentarios y espacios en blanco, y las líneas se almacenan en una cola. Las etiquetas se agregan a una tabla de símbolos. En la segunda pasada, se procesan las líneas, se genera el código de máquina y se almacena en un archivo de salida.Se copila y ejecuta el ensamblador, con opciones para especificar ubicación y nombre de archivo de salida personalizados. El enfoque en la eliminación de comentarios y espacios en blanco es esencial para el funcionamiento correcto del ensamblador. El video ofrece detalles técnicos sobre el proceso de ensamblaje y manipulación del código fuente en un proyecto de ensamblador.</p>
+
+
 
