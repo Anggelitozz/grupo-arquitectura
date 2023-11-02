@@ -312,6 +312,7 @@ Mientras que en la lógica secuencial nos muestra como el computador almacena su
 <p>La principal diferencia se basa en la realimentación que existe en sus compuertas para guardar valores en memoria para posteriores operaciones,
 mientras que en la lógica aritmética las entrada de una compuerta depende de la salidas de otra.
 </p>
+****
 
 # PRACTICA 03
 <h2>¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?</h2>
@@ -321,10 +322,6 @@ circuitos micro programables que se encargan de determinar cuáles son las accio
 Para comprender este lenguaje de bajo nivel es necesario comprender a grandes rasgos el funcionamiento del hardware, 
 con esto se es posible desarrollar sistemas operativos y compiladores que permitan interpretar al lenguaje máquina los lenguajes de alto nivel.
 </p>
-
-# PRACTICA 04
-<h2>Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan?</h2>
-<p>Una limitante que observamos es que el ensamblador de Hack solo puede traducir programas escritos en el lenguaje ensamblador simbólico Hack, que es un lenguaje específico para la máquina Hack. Esto significa que no podemos usar el ensamblador para traducir programas escritos en otros lenguajes ensambladores más complejos, como el lenguaje ensamblador x86 o el lenguaje ensamblador ARM. Además, el ensamblador de Hack no tiene ninguna funcionalidad avanzada, como optimización de código, manejo de errores o generación de reportes. Estas limitaciones pueden dificultar el desarrollo y la depuración de programas más sofisticados o portables. </p>
 
 ## Proyecto-04: Lenguaje de Máquina
 ### Mult.asm
@@ -354,6 +351,11 @@ comparar archivo: debe verificarse inspeccionando visiblemente la pantalla simul
 Escribirás estos programas ensambladores usando un editor de texto plano, los traducirás a Hack binario
 código usando un ensamblador y ejecutarlos usando un emulador de CPU.
 </p>
+
+# PRACTICA 04
+<h2>Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan?</h2>
+<p>Una limitante que observamos es que el ensamblador de Hack solo puede traducir programas escritos en el lenguaje ensamblador simbólico Hack, que es un lenguaje específico para la máquina Hack. Esto significa que no podemos usar el ensamblador para traducir programas escritos en otros lenguajes ensambladores más complejos, como el lenguaje ensamblador x86 o el lenguaje ensamblador ARM. Además, el ensamblador de Hack no tiene ninguna funcionalidad avanzada, como optimización de código, manejo de errores o generación de reportes. Estas limitaciones pueden dificultar el desarrollo y la depuración de programas más sofisticados o portables. </p>
+
 
 ## PROYECTO-05: Arquitectura de Computadores
 ### Memory
