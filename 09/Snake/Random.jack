@@ -1,0 +1,29 @@
+/**
+ * Generacion de numeros pseudo-aleatoria
+ */
+
+class Random {
+	static int x;
+
+	/** Setea una nueva semilla*/
+	function void seed(int seed) {
+		let x = Math.mod(seed, 16);
+		return;
+	}
+
+	/** Devuelve el siguiente numero ranmdom*/
+	function int next() {
+		let x = 7919 + (17*x);
+		return x;
+	}
+
+	/** Devuelve un valor aleatorio entre x (incluyendolo) & y (sin incluirlo) 
+	 *  y debe ser mayor a x */
+	function int between(int x, int y) {
+		var int diff, res;
+		let diff = y - x + 1;
+		let res = Math.mod(Random.next(), diff) + x;
+		if (res = y) { let res = res - 1; }
+		return res * 16;
+	}
+}
