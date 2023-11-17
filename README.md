@@ -410,6 +410,9 @@ Luego, se manejan los segmentos de puntero y temporales, permitiendo en particul
 Finalmente, se maneja el segmento estático.</p>
 
 # PRACTICA 06
-<p>El proyecto 9 de Nand to Tetris se enfoca en la programación de alto nivel utilizando el lenguaje Jack. En este proyecto, se diseño e implementó aplicación en Jack, como un juego de computadora simple o algún otro programa interactivo, en nuestro caso un juego de la culebrita. El proyecto 9 también introduce al sistema operativo Jack, que es una colección de servicios de software que extienden las capacidades del lenguaje básico y cierran las brechas entre él y el hardware subyacente</p>
+<p>El proyecto 9 de Nand to Tetris se enfoca en la programación de alto nivel utilizando el lenguaje Jack. En este proyecto, se diseño e implementó aplicación en Jack, como un juego de computadora simple o algún otro programa interactivo, en nuestro caso un juego de la culebrita. El proyecto 9 también introduce al sistema operativo Jack, que es una colección de servicios de software que extienden las capacidades del lenguaje básico y cierran las brechas entre él y el hardware subyacente.</p>
+
+<p>Los lenguajes de programación de alto nivel son aquellos que se diseñaron para ser fáciles de leer y escribir para los humanos. Por otro lado, un intérprete es un programa que lee y ejecuta código fuente escrito en un lenguaje de programación de alto nivel, mientras que un compilador es un programa que traduce el código fuente escrito en un lenguaje de programación de alto nivel a un lenguaje de bajo nivel, como el lenguaje de máquina. Los lenguajes de programación pueden ser interpretados o compilados. 
+Los lenguajes de programación de alto nivel son más fáciles de leer y escribir para los humanos, mientras que los lenguajes de bajo nivel son más fáciles de leer y escribir para las computadoras. Los intérpretes traducen el código fuente línea por línea y lo ejecutan inmediatamente, mientras que los compiladores traducen todo el código fuente a la vez y generan un archivo ejecutable que se puede ejecutar en una computadora.</p>
 
 
