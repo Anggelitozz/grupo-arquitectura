@@ -408,3 +408,8 @@ En esta etapa, se debe implementar una versión completa del traductor de VM bá
 A continuación, se manejan los segmentos local, argumento, esto y aquello.
 Luego, se manejan los segmentos de puntero y temporales, permitiendo en particular la modificación de las bases de los segmentos esto y aquello.
 Finalmente, se maneja el segmento estático.</p>
+
+# PRACTICA 06
+<p>El proyecto 9 de Nand to Tetris se enfoca en la programación de alto nivel utilizando el lenguaje Jack. En este proyecto, se diseño e implementó aplicación en Jack, como un juego de computadora simple o algún otro programa interactivo, en nuestro caso un juego de la culebrita. El proyecto 9 también introduce al sistema operativo Jack, que es una colección de servicios de software que extienden las capacidades del lenguaje básico y cierran las brechas entre él y el hardware subyacente</p>
+
+
